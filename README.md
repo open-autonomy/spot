@@ -1,5 +1,5 @@
 # Open-Autonomy Spot Interface definition
-This section will explain the Spot service requirements, use casesw and the JSON messaging.
+This section will explain the Spot service requirements, use cases and specify the JSON messaging format.
 
 # Spot Service Purpose
 The spot service is meant to facilitate in-pit interactions between people in heavy equipment and autonomous haul trucks.  The service is designed for real-time mine operations and all message transactions are expected to occur in real-time.
@@ -41,11 +41,11 @@ The `truck origin` attribute of the spot identifies a location on the truck that
 <br>
 
 ## Spot Ingress / Egress
-The Ingress/Egress method specifies if the vehicle should ingress forward or backward, and the same for egress.  The combination of these 2x2 possibilities creates 4 types of Ingress/Egress
-•	Pull Through	: drive forward in and drive forward out
-•	Back In		: reverse into the spot and leave driving forward
-•	Back Out	: drive forward in and reverse to leave
-•	Back Through	: drive in backwards and leave driving backwards
+The Ingress/Egress method specifies if the vehicle should go into the spot forward or backward, and the same for exiting the spot.  The combination of these 2x2 possibilities creates 4 types of Ingress/Egress
+- Pull Through	: drive forward in and drive forward out
+- Back In		: reverse into the spot and leave driving forward
+- Back Out		: drive forward in and reverse to leave
+- Back Through	: drive in backwards and leave driving backwards
 
 <br>
 
@@ -67,7 +67,7 @@ A truck is considered “Spotted” once it has stopped moving within the desire
 <br>
 
 # What is an Origin ?
-An origin is defined as an "a priori" agreed upon reference point that each truck can translate to their local coordinate system.  So a spot position sent to the truck is always in reference to one of these specific origin.
+An origin is defined as an *a priori* agreed upon reference point that each truck can translate to their local coordinate system.  So a spot position sent to the truck is always in reference to one of these specific origin.
 
 Because specific mining use cases, different spots will care about a specific part of the truck to aligning with somthing external lke: 
 - other vehicles, 
@@ -82,20 +82,20 @@ The origin allows the system to focus on the right part of the truck and allows 
 A task is a high-level mining concept of what the truck needs to do once it has reached the designed spot.  The task needs to be translated by the truck's electronic driver into a set of instructions to the base truck that are very specific to the truck's size, capability and sensor set.
 
 > i.g. The task: `"Dump over the edge" here at this spot` could translate to:
-\- Do not plan a path that is parallel to the edge within 10 meters of the edge.
-\- The truck must plan a path that is perpendicular to the edge from >10 meters away.
-\- Use rear sensors as truck backs up so it can make sure that:
-  o	Truck won’t drive over the edge
-  o	Truck must detect the top and bottom of the burm 
-  o	Place tire position so tire just hugs the burm as per AHS configuration with hugging distance = x.x meters.
-  o	Make sure the edge is not collapsing as truck approaches the edge
-\-Once tire hugs burm, raise the tray at 45 degree with maximum velocity and wait 10 seconds so material can be ejected as far as possible over the edge and minimize dozer cleanup
-\- Then raise tray at 100% to finish the dump and wait 20 seconds with tray at 100%
-\- With the tray up, then move forward Y meters to clean any remaining material that is still in the tray
-\- If the weather is wet, stop abruptly once Y meter is reached to minimize carryback
-\- Then drive slowly forward (or stay stationary) while lowering the tray completely down.
-\- The dumping task is now complete.
-{.is-info}
+<br>- Do not plan a path that is parallel to the edge within 10 meters of the edge.
+<br>- The truck must plan a path that is perpendicular to the edge from >10 meters away.
+<br>- Use rear sensors as truck backs up so it can make sure that:
+<br>  o	Truck won’t drive over the edge
+<br>  o	Truck must detect the top and bottom of the burm 
+<br>  o	Place tire position so tire just hugs the burm as per AHS configuration with hugging distance = x.x meters.
+<br>  o	Make sure the edge is not collapsing as truck approaches the edge
+<br>-Once tire hugs burm, raise the tray at 45 degree with maximum velocity and wait 10 seconds so material can be ejected as far as possible over the edge and minimize dozer cleanup
+<br>- Then raise tray at 100% to finish the dump and wait 20 seconds with tray at 100%
+<br>- With the tray up, then move forward Y meters to clean any remaining material that is still in the tray
+<br>- If the weather is wet, stop abruptly once Y meter is reached to minimize carryback
+<br>- Then drive slowly forward (or stay stationary) while lowering the tray completely down.
+<br>- The dumping task is now complete.
+
 
 
 
