@@ -17,7 +17,7 @@ In the future, we plan on providing the ability to specify a lower scope to retr
 {
   "Protocol":"Open-Autonomy",
   "Version": 1,
-  "Timestamp": "2020-07-24T09:30:10.831Z ",
+  "Timestamp": "2023-01-23T09:30:10.831Z ",
 
   "PlaceCommandV1": 
   {
