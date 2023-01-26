@@ -2,6 +2,12 @@
 Find below the Version 1 messages supported for the spot service
 <br>
 
+# class
+## [Place](class_PlaceV1.md)
+## [Spot](class_SpotV1.md)
+## [Queue Primary](class_QueuePrimaryV1.md)
+## [Queue Stage](class_QueueStageV1.md)
+
 # General purpose messaging
 ## [PlaceAllV1](PlaceAllV1.md)
 ## [PlaceSummaryV1](PlaceSummaryV1.md)
