@@ -8,6 +8,8 @@ Find below the Version 1 messages supported for the spot service
 ## [Queue Primary](class_QueuePrimaryV1.md)
 ## [Queue Stage](class_QueueStageV1.md)
 
+<br><br>
+
 # General purpose messaging
 ## [PlaceAllV1](PlaceAllV1.md)
 ## [PlaceSummaryV1](PlaceSummaryV1.md)
