@@ -68,7 +68,7 @@ A dispatcher is requested by maintenance to park a specific truck (that has an a
   "Protocol":"Open-Autonomy",
   "Version": 1,
   "Timestamp": "2018-10-31T09:30:10.435Z",
-  " ApproachingPlaceV1":
+  "ApproachingPlaceV1":
   {
 	"VehicleId": "e4de3723-a315-4506-b4e9-537088a0eabf",
 	"FromWayId": 731854,

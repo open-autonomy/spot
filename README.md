@@ -1,17 +1,22 @@
 # Open-Autonomy Spot Interface definition
 This section will explain the Spot service requirements, use cases and specify the messaging format.
 
+<br><br>
+
 ## [Message specification](./specification/README.md)
 ## [Message flow diagram](./MessageFlow.md)
 
-<br>
-<br>
+<br><br>
 
 # Introduction
 This repo is dedicated at documenting the Spot service.  One of the services used in the open-autonomy family.
 
+<br>
+
 # Spot Service Purpose
 The spot service is meant to facilitate in-pit interactions between people in heavy equipment and autonomous haul trucks.  The service is designed for real-time mine operations and all message transactions are expected to occur in real-time.
+
+<br>
 
 # Audience
 - Autonomy integrators ( typically miners )
@@ -35,7 +40,7 @@ A spot is a place in the mine where operators want a vehicle to precisely positi
 In the graphic below, the spot is represented by a red dot with an orange arrow. <br>
 ![SpotDefinition graphics](./draw.io/SpotDefinition.drawio.svg)
 
-<br>
+<br><br>
 
 ## Truck origin
 The `truck origin` attribute of the spot identifies a location on the truck that the electronic driver must align with the spot position.  There are 5 origins defined for a haul truck:
@@ -45,7 +50,7 @@ The `truck origin` attribute of the spot identifies a location on the truck that
 4.	Rear
 5.	Pile
 
-<br>
+<br><br>
 
 ## Spot Ingress / Egress
 The Ingress/Egress method specifies if the vehicle should go into the spot forward or backward, and the same for exiting the spot.  The combination of these 2x2 possibilities creates 4 types of Ingress/Egress
