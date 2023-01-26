@@ -1,6 +1,8 @@
 # Open-Autonomy Spot Interface definition
 This section will explain the Spot service requirements, use cases and specify the JSON messaging format.
 
+## [Message specification](./specification/README.md)
+
 # Spot Service Purpose
 The spot service is meant to facilitate in-pit interactions between people in heavy equipment and autonomous haul trucks.  The service is designed for real-time mine operations and all message transactions are expected to occur in real-time.
 
