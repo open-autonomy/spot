@@ -1,7 +1,7 @@
 # PlaceCommandV1
 
 |key|value|
------------
+|---|-----|
 | "Method" | "GET" |
 | "Scope" | "/summary" |
 
