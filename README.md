@@ -28,9 +28,9 @@ A spot is a place in the mine where operators want a vehicle to precisely positi
 ## A spot possesses these attributes
 1. a point represented by an absolute position on earth (LLE)
 2. a heading vector pointing towards the front of the vehicle
-3. a truck origin, one of 5 significant points on a truck
+3. a `truck origin`, one of 5 significant points on a truck
 4. an Ingress/Egress method
-5. a task that the truck should execute
+5. a `task` that the truck should execute
 
 In the graphic below, the spot is represented by a red dot with an orange arrow. <br>
 ![SpotDefinition graphics](./draw.io/SpotDefinition.drawio.svg)
