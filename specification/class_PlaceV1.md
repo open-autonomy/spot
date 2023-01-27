@@ -3,7 +3,7 @@
 A `Place` is a virtual class containing all the shared attributes of these children classes:
 - [`Spot`](#spotv1)
 - [`Primary Queue`](#primaryqueuev1)
-- [`Staging Queue`](#stagingqueuev1)
+- [`Staging Queue`](#queuestagev1)
 
 
 ## Place attributes
@@ -40,7 +40,7 @@ A `Place` is a virtual class containing all the shared attributes of these child
 |`"Action"`| [`Task`](enum_Place.md#task-enumeration) |enum| What the truck is ectected to do once it has spotted.|
 |`"OwnerWayId"`| WayId |integer| An Area or Path WayId defined in the Map service where this spot is contained.  Spots are typically created in real time in an open area.  But there are certain exceptions where they can be staticky defined on a road. |
 |`"OwnerGUID"`| VehicleId|UUID<br>`nullable`| If this spot was created by a piece of equipment, then this field must be set to the equipment GUID.  If it’s staticaly defined through a surveyed import, then it must be set to null. |
-|`"ServiceChain"`|see [`ServiceChain`](#service-chain)| ArrayOf `[]`|All the defined ways to reach this spot.  A spot can’t exist without at least one chain.  A chain must have a minimum of one primary queue to exist.|
+|`"ServiceChain"`|see [`ServiceChain`](#servicechainv1)| ArrayOf `[]`|All the defined ways to reach this spot.  A spot can’t exist without at least one chain.  A chain must have a minimum of one primary queue to exist.|
 
 
 ## Example SpotV1
@@ -82,6 +82,32 @@ A `Place` is a virtual class containing all the shared attributes of these child
     }
 	]
 ```
+
+<br><br>
+
+
+# ServiceChainV1
+The service chain documents all the different ways, through places, a vehicle can navigate to reach this spot.  In a large area or a complex situation like near the crusher, there might be multiple queues that can feed a single spot.  But for most situation, there will only be a single primary queue to reach a spot, that simple !
+
+**By Design**, this model
+- Forces that 2 primary queues can’t be linked to each other  (because a service chain can only hold one Primary queue)
+- Queues can be created before a spot exists and before a free space area exists.
+
+
+## object attributes
+|key |value |format | Description|
+|---|:---:|:---:|---|
+|``"LinkWayId"``||||
+|``"LinkQueuePrimary"``||||
+|``"LinkQueueStage"``||ArrayOf`[]`|This array may often be empty ;  We should place an upper bound of 8 just because we like to bound things.|
+
+
+Behavior Conventions:
+•	The spot server should automatically create a Primary queue near the end of each WayId that are not connected to another WayId  (Normally an ingress wayId that enters an autonomous Open area).
+•	There should be only a single Primary queue per ingress WayId and use Staging queues if required to serve many points.
+•	Only a staging queue can merge 2+ queues at its ingress.
+•	Only a staging queue can split its egress into 2+ places.
+
 
 
 <br><br>
@@ -125,6 +151,31 @@ The `QueueStageV1` is an **OPTIONAL** series of transit places that need to be r
 |``"ParentQueueId"``||u_int64 |One or many One-level up parent (sources) that can feed this staging queue.  A parent queue can be a “primary” or a “staging” queue.|
 
 
-## Example QueueStageV1
+## Example StagingQueueSpotV1
+Note that this object is usually contained in an array.  But the example is for a single object.
 ```json
+"StagingQueueSpotV1":
+{
+  "TimeCreation":"2018-10-31T09:30:10.43.512Z",
+  "PlaceId":731854,
+  "Latitude":49.176854,
+  "Longitude":-123.0718,
+  "Elevation":22.69,
+  "Heading":68,
+  "PlaceIO":"PullThrough",
+  "Origin":"Load",
+  "DynamicPathId":8456,
+  "ServiceMaxUtilization":null,
+  "PlaceState":"Open",
+  "ChangeSequence":836,
+  "ServicingVehicleGUID": null,
+  "ServiceCount":0,
+
+  "Capacity":1,
+  "CapacityUsed":1,
+  "Action":"Load",
+  "QueueState":"Full",
+  "ParentQueueId":[73185]
+}
+
 ```
