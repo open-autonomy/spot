@@ -1,12 +1,12 @@
 # Open-Autonomy Spot Interface definition
 This section will explain the Spot service requirements, use cases and specify the messaging format.
 
-<br><br>
+<br>
 
-## [Message specification](./specification/README.md)
-## [Message flow diagram](./MessageFlow.md)
+### [Message specification](./specification/README.md)
+### [Message flow diagram](./MessageFlow.md)
 
-<br><br>
+<br>
 
 # Introduction
 This repo is dedicated at documenting the Spot service.  One of the services used in the open-autonomy family.
