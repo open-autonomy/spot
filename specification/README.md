@@ -1,9 +1,9 @@
 # Message definition
 Find below the Specification for the Version 1 protocol for the spot service of Open-Autonomy
-### [class](#class)
-### [Enumeration](#enumeration)
-### [General Purpose Messagess](#General-purpose-messaging)
-### [Autonomous Truck Messaging](#Autonomous-truck-messaging)
+- [Class](#class)
+- [Enumeration](#enumeration)
+- [General Purpose Message](#General-purpose-messaging)
+- [Autonomous Truck Message](#Autonomous-truck-messaging)
 
 <br><br>
 
@@ -14,13 +14,15 @@ Find below the Specification for the Version 1 protocol for the spot service of 
 ### [Queue Stage](class_PlaceV1.md#queuestagespotv1)
 ### [Service Chain](class_PlaceV1.md#servicechain)
 
+<br><br>
+
 # Enumeration
-###[`PlaceIO`](enum_Place.md#placeio-enumeration)
-###[`Task`](enum_Place.md#task-enumeration)
-###[`Origin`](enum_Place.md#origin-enumeration)
-###[`PlaceState`](enum_Place.md#placestate-enumeration)
-###[`SpotState`](enum_Place.md#spotstate-enumeration)
-###[`QueueState`](enum_Place.md#queuestate-enumeration)
+###[PlaceIO](enum_Place.md#placeio-enumeration)
+###[Task](enum_Place.md#task-enumeration)
+###[Origin](enum_Place.md#origin-enumeration)
+###[PlaceState](enum_Place.md#placestate-enumeration)
+###[SpotState](enum_Place.md#spotstate-enumeration)
+###[QueueState](enum_Place.md#queuestate-enumeration)
 
 <br><br>
 
