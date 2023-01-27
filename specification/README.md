@@ -1,12 +1,26 @@
 # Message definition
-Find below the Version 1 messages supported for the spot service
-<br>
+Find below the Specification for the Version 1 protocol for the spot service of Open-Autonomy
+### [class](#class)
+### [Enumeration](#enumeration)
+### [General Purpose Messagess](#General-purpose-messaging)
+### [Autonomous Truck Messaging](#Autonomous-truck-messaging)
 
-# class
-### [Place](class_PlaceV1.md)
-### [Spot](class_SpotV1.md)
-### [Queue Primary](class_QueuePrimaryV1.md)
-### [Queue Stage](class_QueueStageV1.md)
+<br><br>
+
+# Class
+### [Place](class_PlaceV1.md#place)
+### [Spot](class_PlaceV1.md#spotv1)
+### [Queue Primary](class_PlaceV1.md#primaryqueuespotv1)
+### [Queue Stage](class_PlaceV1.md#queuestagespotv1)
+### [Service Chain](class_PlaceV1.md#servicechain)
+
+# Enumeration
+###[`PlaceIO`](enum_Place.md#placeio-enumeration)
+###[`Task`](enum_Place.md#task-enumeration)
+###[`Origin`](enum_Place.md#origin-enumeration)
+###[`PlaceState`](enum_Place.md#placestate-enumeration)
+###[`SpotState`](enum_Place.md#spotstate-enumeration)
+###[`QueueState`](enum_Place.md#queuestate-enumeration)
 
 <br><br>
 
