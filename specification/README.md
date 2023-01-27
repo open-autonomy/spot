@@ -17,12 +17,12 @@ Find below the Specification for the Version 1 protocol for the spot service of 
 <br><br>
 
 # Enumeration
-###[PlaceIO](enum_Place.md#placeio-enumeration)
-###[Task](enum_Place.md#task-enumeration)
-###[Origin](enum_Place.md#origin-enumeration)
-###[PlaceState](enum_Place.md#placestate-enumeration)
-###[SpotState](enum_Place.md#spotstate-enumeration)
-###[QueueState](enum_Place.md#queuestate-enumeration)
+### [PlaceIO](enum_Place.md#placeio-enumeration)
+### [Task](enum_Place.md#task-enumeration)
+### [Origin](enum_Place.md#origin-enumeration)
+### [PlaceState](enum_Place.md#placestate-enumeration)
+### [SpotState](enum_Place.md#spotstate-enumeration)
+### [QueueState](enum_Place.md#queuestate-enumeration)
 
 <br><br>
 

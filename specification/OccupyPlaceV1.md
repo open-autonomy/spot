@@ -7,6 +7,7 @@ An Occupy place message is a mini-dispatching instruction set on how to reach a 
 |---|---|---|
 |`Spot` | `ApproachingLastMileV1` message| nothing immediate|
 
+<br>
 
 This message gives explicit permissions, to a truck identified by the VehicleID, to use the listed resource(s). The message will including all the resources the truck currently posses (not just added permissions).   The truck will have to Release each resources once it leaves that resource with the `LeftPlaceV1` message.  Even if the truck does not stop at the resource, the truck must release the place once it passes that LLE position so it’s released for other trucks to use.
 
