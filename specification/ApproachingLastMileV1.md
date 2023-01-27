@@ -1,21 +1,21 @@
 # ApproachingLastMileV1
 
-This message is send by AHS to enter a specific truck into the last mile dispatching system when the truck is getting close to an open area.
+This message is send by AHS to enter a specific truck into the last mile dispatching service when the truck is getting close to an open area.
 
-|Sender| Triggers|
-|---|---|
-|`AHS` | `OccupyPlace` message|
+|Sender| Triggered by | Triggers|
+|---|---|---|
+|`AHS` | Truck approaching end of haul road| `OccupyPlace` message|
 
 ## Message attributes
 
 |key |value |format | Description|
-|---|-----|-----|---|
+|---|:---:|:---:|---|
 | `"VehicleId"` | VehicleID | UUID | The UUID identifying the vehicle defined in the fleet definition. |
 | ``"FromWayId"`` | WayID | integer | The ID of the road segment the vehicle will enter the open area.  The source of this ID is from the Map, provided by the map service. |
 | ``"ToType"`` |  oneOf : [``"Equipment"``, ``"Area"``, ``"Place"``] | string | Identifies the type of entity the vehicle wants to reach. This will be used to identify which of the 3 attributes holds the destination entity ID in the JSON.|
-| ``"EquipmentId"`` | VehicleID | UUID | Asks the last mile dispatching to find the next available spot served by the vehicle identified by the UUID.  Typically a loading spot at a shovel or digger.  |
-|``"AreaId"``| WayId| integer| Asks the last mile dispatching to find the next available spot in the Area.  Typically a dumping spot or a parking spot.|
-|``"PlaceId"``| PlaceId| integer| Asks the last mile dispatching to send to a specific spot. Typically a parking bay or a fueling bay.|
+| ``"EquipmentId"`` <br> optional | VehicleID | UUID | Asks the last mile dispatching to find the next available spot served by the vehicle identified by the UUID.  Typically a loading spot at a shovel or digger. This field is only required when the ``"ToType"`` is ``"Equipment"`` |
+|``"AreaId"`` <br> optional| WayId| integer| Asks the last mile dispatching to find the next available spot in the Area.  Typically a dumping spot or a parking spot.  This field is only required when the ``"ToType"`` is ``"Area"`` |
+|``"PlaceId"``<br> optional| PlaceId| uint_64| Asks the last mile dispatching to send to a specific spot. Typically a parking bay or a fueling bay. This field is only required when the ``"ToType"`` is ``"Place"`` |
 
 
 ## To Equipment Use Case:
@@ -47,6 +47,7 @@ The truck was dispatched to an over the edge dump (or paddock) in an open area a
   "Protocol":"Open-Autonomy",
   "Version": 1,
   "Timestamp": "2018-10-31T09:30:10.435Z",
+
   "ApproachingLastMileV1":
   {
 	"VehicleId": "e4de3723-a315-4506-b4e9-537088a0eabf",
@@ -68,6 +69,7 @@ A dispatcher is requested by maintenance to park a specific truck (that has an a
   "Protocol":"Open-Autonomy",
   "Version": 1,
   "Timestamp": "2018-10-31T09:30:10.435Z",
+
   "ApproachingPlaceV1":
   {
 	"VehicleId": "e4de3723-a315-4506-b4e9-537088a0eabf",
