@@ -4,9 +4,9 @@ Here is a list of all the enumerations we use
 - [`PlaceIO`](#placeio-enumeration)
 - [`Task`](#task-enumeration)
 - [`Origin`](#origin-enumeration)
-- [`PlaceState`](#placestate enumeration)
-- [`SpotState`](#spotstate enumeration)
-- [`QueueState`](#queuestate enumeration)
+- [`PlaceState`](#placestate-enumeration)
+- [`SpotState`](#spotstate-enumeration)
+- [`QueueState`](#queuestate-enumeration)
 
 <br>
 
@@ -50,10 +50,10 @@ What part of the truck should be positioned / aligned with the designed spot.
 
 > NOTE Any Origin can be used for any type of spot.  But typically these are the normal combinations
 
-These are TYPICAL configurations at a mine site.  But any configuration is possible.
+These are TYPICAL spot types configurations at a mine site.  But any configuration is possible with any spot type.
 
 |Origin	|Load	|Dump Crusher	|Dump Paddock	|Dump OverEdge	|Fuel	|Park	|Wait|
-|---|---|---|---|---|---|---|---|
+|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |Front|:x:	|:x:	|:x:	|:x:	| :white_check_mark:	|:white_check_mark:	|:white_check_mark:|
 |Load	|:white_check_mark:|:x:|:x:|:x:|:x:|:x:|:x:|
 |Axle|:x:|:white_check_mark:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
