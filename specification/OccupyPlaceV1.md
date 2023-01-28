@@ -33,7 +33,7 @@ The message envelop will also contain a copy of all objects representing the res
 
 
 
-# Example
+# Example 1
 Vehicle 2248…beec6 is granted permission to go through the Primary queue directly down to the Spot 731854.  In this example, there is no staging queue (as it it set to `null`).  Because the truck has received 2 permissions, the message also includes the current state of the 2 places.
 
 ```json
@@ -109,5 +109,49 @@ Vehicle 2248…beec6 is granted permission to go through the Primary queue direc
   }
 
 
+}
+```
+
+
+# Example 2
+Vehicle `9ac95f3e-9eac-11ed-a8fc-0242ac120002` is granted permission to enter but stop at the Primary queue and wait there.  In this example there is one staging queue, but the truck does not have permission to continue to it.  Only he primary queue object is included with the dispatch because the truck has only permission to the primary queue.
+
+```json
+{
+  "Protocol":"Open-Autonomy",
+  "Version": 1,
+  "Timestamp": "2023-01-23T09:30:10.435Z",
+
+  "OccupyPlaceV1":
+  {
+    "VehicleId": "9ac95f3e-9eac-11ed-a8fc-0242ac120002",
+    "LastMileId": "43b3bd52-9eac-11ed-a8fc-0242ac120002",
+    "QueueIdPrimary": 56982,
+    "QueueIdStage": [0],
+    "SpotId": 0
+  },
+
+  "PrimaryQueueSpotV1":
+  {
+    "TimeCreation": "2023-01-23T09:30:10.43.511Z",
+    "PlaceId" : 56982,
+    "PlaceState": "Opened",
+    "Latitude" : 49.1768531,
+    "Longitude" : -123.071610,
+    "Elevation" : 22.69,
+    "Heading" : 74,
+    "PlaceIO": "PullThrough",
+    "Origin": "Front",   
+    "DynamicPathId": 56982,
+    "ServiceMaxUtilization": null,
+    "PlaceState": "Available",
+    "ChangeSequence": 9,
+    "ServicingVehicleGUID": "2248d535-3daf-4a86-b1e1-4951a22beec6",
+    "ServiceCount": 26,
+    "Capacity": 4,
+    "CapacityUsed": 1,
+    "QueueState": "Open",
+    "LinkWayId": 111
+  }
 }
 ```

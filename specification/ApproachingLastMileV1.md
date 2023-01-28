@@ -4,7 +4,7 @@ This message is send by AHS to enter a specific truck into the last mile dispatc
 
 |Sender| Triggered by | Triggers|
 |---|---|---|
-|`AHS` | Truck approaching end of haul road| `OccupyPlace` message|
+|`AHS` | Truck approaching the end of haul road <br>and wanting to enter the last mile dispatching| `OccupyPlace` message|
 
 ## Message attributes
 
