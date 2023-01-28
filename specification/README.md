@@ -2,7 +2,7 @@
 Find below the Specification for the Version 1 protocol for the spot service of Open-Autonomy
 - [Class](#class)
 - [Enumeration](#enumeration)
-- [General Purpose Message](#General-purpose-messaging)
+- [Spot Message](#spot-service)
 - [Autonomous Truck Message](#Autonomous-truck-messaging)
 
 <br><br>
@@ -26,13 +26,12 @@ Find below the Specification for the Version 1 protocol for the spot service of 
 
 <br><br>
 
+# Spot Service
 ### [ServiceIdentification](ServiceIdentification.md)
-
-# Service Dispatching messaging
+# Last Mile Dispatching 
 ### [OccupyPlaceV1](OccupyPlaceV1.md)
 ### [LeavePlaceV1](LeavePlaceV1.md)
-
-# Service Cache messaging
+# Cache Management
 ### [PlaceSummaryV1](PlaceSummaryV1.md)
 ### [PlaceAllV1](PlaceAllV1.md)
 ### [PlaceCreatedV1](PlaceCreatedV1.md)
