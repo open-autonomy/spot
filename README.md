@@ -1,8 +1,6 @@
 # Open-Autonomy Spot Interface definition
 This section will explain the Spot service requirements, use cases and specify the messaging format.
 
-<br>
-
 ### [Message specification](./specification/README.md)
 ### [Message flow diagram](./MessageFlow.md)
 

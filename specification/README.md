@@ -26,10 +26,18 @@ Find below the Specification for the Version 1 protocol for the spot service of 
 
 <br><br>
 
-# General purpose messaging
+# Service General purpose messaging
 ### [PlaceAllV1](PlaceAllV1.md)
 ### [PlaceSummaryV1](PlaceSummaryV1.md)
 ### [ServiceIdentification](ServiceIdentification.md)
+
+# Service Dispatching messaging
+### [OccupyPlaceV1](OccupyPlaceV1.md)
+
+# Service Cache messaging
+### [PlaceCreatedV1](PlaceCreatedV1.md)
+### [PlaceDeletedV1](PlaceDeletedV1.md)
+### [PlaceUpdatedV1](PlaceUpdatedV1.md)
 
 <br><br>
 
@@ -40,10 +48,8 @@ Find below the Specification for the Version 1 protocol for the spot service of 
 ### [LeavePlaceV1](LeavePlaceV1.md)
 ### [LeftPlaceV1](LeftPlaceV1.md)
 ### [OccupyingPlaceV1](OccupyingPlaceV1.md)
-### [OccupyPlaceV1](OccupyPlaceV1.md)
 ### [PlaceCommandV1](PlaceCommandV1.md)
-### [PlaceCreatedV1](PlaceCreatedV1.md)
-### [PlaceDeletedV1](PlaceDeletedV1.md)
-### [PlaceUpdatedV1](PlaceUpdatedV1.md)
 ### [SetDynamicPathIDV1](SetDynamicPathIDV1.md)
 ### [TaskStartV1](TaskStartV1.md)
+
+<br><br>

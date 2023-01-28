@@ -1,10 +1,12 @@
 # PlaceAllV1
 
-This message is send by the spot service at connection time or on request by the client.
+This message is send by the spot service at connection time or on request by the client.  The Spot service will Always preceded this message with a [`PlaceSummaryV1`](PlaceSummaryV1.md) message so client applications know what to expect before the object flow starts.
 
-|Sender| Triggered by|
-|---|---|
-|`Spot` | New client connection or <br> `PlaceCommandV1` message |
+> NOTE: This message is always preceeded by a `PlaceSummaryV1` message in an **atomic** fashion.
+
+|Sender| Triggered by | Triggers|
+|---|---|---|
+|`Spot` | New client connection or <br> `PlaceCommandV1` message | nothing |
 
 ## Message attributes
 
