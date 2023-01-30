@@ -8,14 +8,15 @@ This message is send by AHS to enter a specific truck into the last mile dispatc
 
 ## Message attributes
 
-|key |value |format | Description|
-|---|:---:|:---:|---|
-| `"VehicleId"` | VehicleID | UUID | The UUID identifying the vehicle defined in the fleet definition. |
-| ``"FromWayId"`` | WayID | integer | The ID of the road segment the vehicle will enter the open area.  The source of this ID is from the Map, provided by the map service. |
-| ``"ToType"`` |  oneOf : [``"Equipment"``, ``"Area"``, ``"Place"``] | string | Identifies the type of entity the vehicle wants to reach. This will be used to identify which of the 3 attributes holds the destination entity ID in the JSON.|
-| ``"EquipmentId"`` <br> optional | VehicleID | UUID | Asks the last mile dispatching to find the next available spot served by the vehicle identified by the UUID.  Typically a loading spot at a shovel or digger. This field is only required when the ``"ToType"`` is ``"Equipment"`` |
-|``"AreaId"`` <br> optional| WayId| integer| Asks the last mile dispatching to find the next available spot in the Area.  Typically a dumping spot or a parking spot.  This field is only required when the ``"ToType"`` is ``"Area"`` |
-|``"PlaceId"``<br> optional| PlaceId| uint_64| Asks the last mile dispatching to send to a specific spot. Typically a parking bay or a fueling bay. This field is only required when the ``"ToType"`` is ``"Place"`` |
+||key |value |format | Description|
+|---|---|:---:|:---:|---|
+|| `"VehicleId"` | VehicleID | UUID | The UUID identifying the vehicle defined in the fleet definition. |
+|| ``"FromWayId"`` | WayID | integer | The ID of the road segment the vehicle will enter the open area.  The source of this ID is from the Map, provided by the map service. |
+|| ``"ToType"`` |  oneOf : [``"Equipment"``, ``"Area"``, ``"Place"``] | enum [`EntityType`](enum_Place.md#entitytype-enumeration) | Identifies the type of entity the vehicle wants to reach. This will be used to identify which of the 3 attributes holds the destination entity ID in the JSON.  At the time of this writing, a Road is not supported.|
+|OneOf:||||
+|| `"EquipmentId"` | VehicleID | UUID | Asks the last mile dispatching to find the next available spot served by the vehicle identified by the UUID.  Typically a loading spot at a shovel or digger. This field is only required when the ``"ToType"`` is ``"Equipment"`` |
+||`"AreaId"`| WayId| integer| Asks the last mile dispatching to find the next available spot in the Area.  Typically a dumping spot or a parking spot.  This field is only required when the ``"ToType"`` is `"Area"` |
+||`"PlaceId"`| PlaceId| uint_64| Asks the last mile dispatching to send to a specific spot. Typically a parking bay or a fueling bay. This field is only required when the ``"ToType"`` is ``"Place"`` |
 
 
 ## To Equipment Use Case:

@@ -1,9 +1,11 @@
 # V1
 
+I think this message was removed.
+
 
 |Sender| Triggered by | Triggers|
 |---|---|---|
-| `AHS`| Truck is reaching the Place |  |
+| `AHS`| Truck is almost reaching the Place |  |
 
 <br>
 

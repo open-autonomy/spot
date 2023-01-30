@@ -5,6 +5,8 @@ The first message sent by the `spot` service.  It identifies that the client is 
 
 > NOTE: The API version will be incremented when significant new functions are added to the protocol or if backwards compatibility is broken.  Bug fixes have no impact on the protocol version.
 
+> NOTE: In the future, each message could have its onw key:value pair, where the value would be the version number supported by this implementation.  But we are KISSing it for now.
+
 |Sender| Triggered by | Triggers|
 |---|---|---|
 | `spot`  | Client connection | Normally Nothing. <br>  Misconfiguration: disconnection of the client if it connected to the wrong service. |
