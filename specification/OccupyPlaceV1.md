@@ -33,7 +33,7 @@ The message envelop will also contain a copy of all objects representing the res
 
 
 
-# Example 1
+## Example 1
 Vehicle 2248…beec6 is granted permission to go through the Primary queue directly down to the Spot 731854.  In this example, there is no staging queue (as it it set to `null`).  Because the truck has received 2 permissions, the message also includes the current state of the 2 places.
 
 ```json
@@ -113,7 +113,7 @@ Vehicle 2248…beec6 is granted permission to go through the Primary queue direc
 ```
 
 
-# Example 2
+## Example 2
 Vehicle `9ac95f3e-9eac-11ed-a8fc-0242ac120002` is granted permission to enter but stop at the Primary queue and wait there.  In this example there is one staging queue, but the truck does not have permission to continue to it.  Only he primary queue object is included with the dispatch because the truck has only permission to the primary queue.
 
 ```json

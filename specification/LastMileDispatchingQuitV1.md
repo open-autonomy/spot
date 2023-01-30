@@ -16,7 +16,7 @@ This message is sent by `AHS` to tells the Spot Service that the spot service sh
 ## Use Case:
 This message is used by `AHS` to get a truck out of the last mile dispatching process.  There are multiple reasons why a truck could want to leave before it reaches its spot destination; typically because it was re-dispatched by the FMS.  But many other exceptions may
 
-# Example
+## Example
 While waiting in a queue to be loaded by a shovel, Truck `be87fb7e-9eb6-11ed-a8fc-0242ac120002` was re-dispatched to a new destination because the shovel just wehn down due to a mecanical failure.
 
 ```json

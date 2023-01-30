@@ -21,7 +21,7 @@ When the path ends with the reversed word `/summary`, then the service will only
 In the future, we plan on providing the ability to specify a lower scope as the path to retrieve a subset of the "database" like `"/pit1/"` or `"/pit1/eastParking/"`.
 
 
-# Use case 1
+## Use case 1
 The client application wants to retrieve meta data only to make sure it won't overwhelm it and that it can reserve the right amoutn of resources before the flow of Places begins.  This will trigger the spot service to issue a `PlaceSummaryV1` messages.
 
 ```json
@@ -40,7 +40,7 @@ The client application wants to retrieve meta data only to make sure it won't ov
 ```
 
 
-# Use case 2
+## Use case 2
 The client application wants to receive a copy of all the Places in service.  This will trigger the spot service to issue a series of `PlaceAllV1` messages.
 
 ```json

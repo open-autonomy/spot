@@ -17,7 +17,7 @@ This message is pushed by the spot server when `Place`s are destroyed from the s
 This message will be sent when a High Precision system is turned off and the spots associated with the equipemnt will be destroyed.  When an area is deleted from the map, the user has the option to delete all spots and queues inside that ara.
 
 
-# Example
+## Example
 A small over the edge dump is permanantly closed so its associated queues and spots are deletes because they will never be re-used..
 ```json
 {

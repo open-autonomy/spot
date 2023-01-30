@@ -22,7 +22,7 @@ Part of the spot ressource management.  The spot service will not redistribute p
 - a Staging queue
 - a Spot
 
-# Example
+## Example
 This example would be for a future version that would support multiple scopes.
 ```json
 {

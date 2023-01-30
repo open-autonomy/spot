@@ -7,8 +7,9 @@ When the path ends with `/summary`.  The Spot service will send this message.
 |---|---|---|
 | `spot`| `PlaceCommandV1` | nothing |
 
-<br><br>
+<br>
 
+## Message attributes
 |key |value |format | Description|
 |---|:---:|:---:|---|
 |`"Timestamp"`|Last change|| Timestamp of when the last time there was a change in the spot database|
@@ -20,9 +21,36 @@ When the path ends with `/summary`.  The Spot service will send this message.
 |`"DocumentCount"`| count| uint_64| The number of `PlaceAllV1` messages (pages) that the service will send if it would send `PlaceAllV1` right now|
 
 
-# Example
+## Use Case:
+A client application want to determine what are all the subset scopes it can request.  Or a client application wants to reserve the right amount of resources before it
+
+
+## Example 1
+This example of current implementation with a single scopes.
+```json
+{
+  "Protocol":"Open-Autonomy",
+  "Version": 1,
+  "Timestamp": "2023-01-24T09:30:10.948Z",
+
+  "PlaceSummaryV1":
+  {
+    "Timestamp": "2023-01-23T21:35:27.226Z",
+    "ScopeList": [ "/" ],
+    "ChangeSet":82318740,
+    "CountSpot": 36541,
+    "CountPrimaryQueue": 3853,
+    "CountStagingQueue": 632,
+    "DocumentCount": 5
+  }
+}
+```
+
+
+
+## Example 2
 This example would be for a future version that would support multiple scopes.
-```JSON
+```json
 {
   "Protocol":"Open-Autonomy",
   "Version": 1,
@@ -40,10 +68,3 @@ This example would be for a future version that would support multiple scopes.
   }
 }
 ```
-
-
-
-
-
-## Use Case:
-A client application want to determine what are all the subset scopes it can request.  Or a client application wants to reserve the right amount of resources before it

@@ -22,7 +22,7 @@ The way the electronic driver tells the spot service it has reached a `Place`.  
 ## Use Case:
 This message is used by the Spot service to track where the trucks are on the service chain to the spot.
 
-# Example
+## Example
 This example would be for a future version that would support multiple scopes.
 ```json
 {

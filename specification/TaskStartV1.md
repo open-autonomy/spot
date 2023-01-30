@@ -21,7 +21,7 @@ For agreed upon tasks *(e.g. crusher dumping)*, the truck will spot and wait to 
 ## Use Case:
 This message will typically be used for crusher dumping to ensure the trucks don't start dumping immediately because the crusher could be too full at times or the rock breaker might be engaged.
 
-# Example
+## Example
 The truck 2248...eec6 spotted at 731854 is told to start the action configured for that Spot.
 ```json
 {
