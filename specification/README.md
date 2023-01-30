@@ -5,7 +5,8 @@ Find below the Specification for the Version 1 protocol for the spot service of 
 - [Spot Message](#spot-service)
 - [Autonomous Truck Message](#Autonomous-truck-messaging)
 
-<br><br>
+> NOTE that all examples are formatted for your convenience and viewing pleasure.  It is not expected that the messages will contain all these new lines, tabs & spaces so a human can read it. The indentataion can't be programatically relied upon, it's just there to delight your brain.
+---
 
 # Class
 ### [Place](class_PlaceV1.md#place)
@@ -13,8 +14,9 @@ Find below the Specification for the Version 1 protocol for the spot service of 
 ### [Queue Primary](class_PlaceV1.md#primaryqueuespotv1)
 ### [Queue Stage](class_PlaceV1.md#queuestagespotv1)
 ### [Service Chain](class_PlaceV1.md#servicechain)
+---
 
-<br><br>
+<br>
 
 # Enumeration
 ### [PlaceIO](enum_Place.md#placeio-enumeration)
@@ -23,8 +25,9 @@ Find below the Specification for the Version 1 protocol for the spot service of 
 ### [PlaceState](enum_Place.md#placestate-enumeration)
 ### [SpotState](enum_Place.md#spotstate-enumeration)
 ### [QueueState](enum_Place.md#queuestate-enumeration)
+---
 
-<br><br>
+<br>
 
 # Spot Service
 ### [ServiceIdentification](ServiceIdentification.md)
@@ -38,8 +41,9 @@ Find below the Specification for the Version 1 protocol for the spot service of 
 ### [PlaceCreatedV1](PlaceCreatedV1.md)
 ### [PlaceDeletedV1](PlaceDeletedV1.md)
 ### [PlaceUpdatedV1](PlaceUpdatedV1.md)
+---
 
-<br><br>
+<br>
 
 # Autonomous truck messaging
 ### [ApproachingLastMileV1](ApproachingLastMileV1.md)
@@ -49,5 +53,6 @@ Find below the Specification for the Version 1 protocol for the spot service of 
 ### [OccupyingPlaceV1](OccupyingPlaceV1.md)
 ### [PlaceCommandV1](PlaceCommandV1.md)
 ### [SetDynamicPathIDV1](SetDynamicPathIDV1.md)
+---
 
-<br><br>
+<br>

@@ -11,15 +11,44 @@ This message is send by the spot service at connection time or on request by the
 ## Message attributes
 
 |key |value |format | Description|
-|---|-----|-----|---|
+|---|:---:|:---:|---|
 | `"ChangeSet"` | Change SequenceNumber | integer| A number that increments each time there is a modification to the DB |
 | ``"DocumentSequence"`` | Current page | integer | The current page in the sequence of pages being sent to the client|
 |``"DocumentCount"`` | Total pages | integer | The number of pages required to send the entire DB.  The spot service will cut the data in a series of pages if the data gets beyond the capacity of a page. |
+|[`"SpotV1"`](class_PlaceV1.md#spotv1)|N/A|ArrayOf:<br>`[Spot]`| NOTE: the array can be empty, but not `null`.<br> See Reference [`"SpotV1"`](class_PlaceV1.md#spotv1)|
+|[`"PrimaryQueueSpotV1"`](class_PlaceV1.md#primaryqueuespotv1)|N/A|ArrayOf:<br>`[PrimaryQueue]`| NOTE: the array can be empty, but not `null`.<br> See Reference [`"PrimaryQueueSpotV1"`](class_PlaceV1.md#primaryqueuespotv1)|
+|[`"StagingQueueSpotV1"`](class_PlaceV1.md#queuestagespotv1)|N/A|ArrayOf:<br>`[StagingQueue]`| NOTE: the array can be empty, but not `null`.<br> See Reference [`"PrimaryQueueSpotV1"`](class_PlaceV1.md#queuestagespotv1)|
+
+
 
 
 ## Usage
 The spot service will chunk the whole database into several pages when there are more than XXX (configurable, say 500 for now) places.  The number of places and pages can be known beforehand by requesting the GetPlaceSummary.
-```JSON
+
+
+## Example 1
+Connecting to an empty database.  No spots exists.
+```json
+{
+	"Protocol": "Open-Autonomy",
+	"Version": 1,
+	"Timestamp": "2023-01-23T23:31:58.911Z",
+
+	"PlaceAllV1":
+	{
+		"ChangeSet": 0,
+		"DocumentSequence": 1,
+		"DocumentCount": 1,		
+		"SpotV1": [],
+		"StagingQueueSpotV1": [],
+		"PrimaryQueueSpotV1": []
+	}
+}
+```
+
+## Example 2
+Connecting to a very small database.  (Granted it is inconsistent since there are places referenced that are not defined in here...  Please update with a real output.)
+```json
 {
 "Protocol": "Open-Autonomy",
 "Version": 1,
@@ -76,8 +105,7 @@ The spot service will chunk the whole database into several pages when there are
 		"PlaceIO":"PullThrough",
 		"Origin":"Load",
 		"DynamicPathId":8456,
-		"ServiceMaxUtilization":null,
-		"ServicingVehicleGUID":"00000000-0000-0000-0000-000000000000",
+		"ServiceMaxUtilization": null,
 		"ServicingVehicleGUID": null,
 		"ServiceCount":0,
 		"Capacity":1,
