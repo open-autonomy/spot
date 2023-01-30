@@ -6,6 +6,9 @@ The spot messages include a few objects that are embedded as complex attributes.
 - [`Primary Queue`](#primaryqueuespotv1)
 - [`Staging Queue`](#queuestagespotv1)
 
+>PLEASE NOTE: Below is an object oriented model of the Spot & queues.  The JSON messages are  flattened versions of that and there is only 3 concrete objects of types { Spot, Queue and Stage}.  So don’t be confused by the models below and that you don't see this structure in the the flatten JSON in the messages.
+
+![Class hierarchy graphics](./draw.io/Class_Place.drawio.svg)
 
 ---
 
@@ -53,7 +56,7 @@ You will never encounter a place object in the messages, but other concrete clas
 |`"OwnerWayId"`| WayId |integer| An Area or Path WayId defined in the Map service where this spot is contained.  Spots are typically created in real time in an open area.  But there are certain exceptions where they can be staticky defined on a road. |
 |`"OwnerGUID"`| VehicleId|UUID<br>`nullable`| If this spot was created by a piece of equipment, then this field must be set to the equipment GUID.  If it’s staticaly defined through a surveyed import, then it must be set to null. |
 |`"ServiceChain"`|see [`ServiceChain`](#servicechainv1)| ArrayOf `[ServiceChain]`|All the defined ways to reach this spot.  A spot can’t exist without at least one chain.  A chain must have a minimum of one primary queue to exist.|
-|`"SpotState"`|[`SpotState`](enum_Place.md#spotstate-enumeration)| enum| The state of the spot.|
+|`"SpotState"`|[`SpotState`](enum_Place.md#spotstate-enumeration)| enum| The state of the spot.  This field is very dynamic in the lifecycle of a spot.|
 
 
 ## Example SpotV1
