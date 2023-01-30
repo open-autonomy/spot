@@ -28,8 +28,9 @@ Find below the Specification for the Version 1 protocol for the spot service of 
 
 # Spot Service
 ### [ServiceIdentification](ServiceIdentification.md)
-# Last Mile Dispatching 
+# Last Mile Dispatching
 ### [OccupyPlaceV1](OccupyPlaceV1.md)
+### [TaskStartV1](TaskStartV1.md)
 ### [LeavePlaceV1](LeavePlaceV1.md)
 # Cache Management
 ### [PlaceSummaryV1](PlaceSummaryV1.md)
@@ -48,6 +49,5 @@ Find below the Specification for the Version 1 protocol for the spot service of 
 ### [OccupyingPlaceV1](OccupyingPlaceV1.md)
 ### [PlaceCommandV1](PlaceCommandV1.md)
 ### [SetDynamicPathIDV1](SetDynamicPathIDV1.md)
-### [TaskStartV1](TaskStartV1.md)
 
 <br><br>
