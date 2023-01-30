@@ -48,11 +48,12 @@ You will never encounter a place object in the messages, but other concrete clas
 ## object attributes
 |key |value |format | Description|
 |---|:---:|:---:|---|
-|`"Place"`|see [`"Place"`](#place-attributes)|see [`"Place"`](#place-attributes)|see [`"Place"`](#place-attributes)|
-|`"Action"`| [`Task`](enum_Place.md#task-enumeration) |enum| What the truck is ectected to do once it has spotted.|
+|include <br>[`"Place"`](#place-attributes)|N/A|N/A| Reference [`"Place"`](#place-attributes)|
+|`"Action"`| [`Task`](enum_Place.md#task-enumeration) |enum| What the truck is expected to do once it has spotted.|
 |`"OwnerWayId"`| WayId |integer| An Area or Path WayId defined in the Map service where this spot is contained.  Spots are typically created in real time in an open area.  But there are certain exceptions where they can be staticky defined on a road. |
 |`"OwnerGUID"`| VehicleId|UUID<br>`nullable`| If this spot was created by a piece of equipment, then this field must be set to the equipment GUID.  If it’s staticaly defined through a surveyed import, then it must be set to null. |
 |`"ServiceChain"`|see [`ServiceChain`](#servicechainv1)| ArrayOf `[ServiceChain]`|All the defined ways to reach this spot.  A spot can’t exist without at least one chain.  A chain must have a minimum of one primary queue to exist.|
+|`"SpotState"`|[`SpotState`](enum_Place.md#spotstate-enumeration)| enum| The state of the spot.|
 
 
 ## Example SpotV1
@@ -76,6 +77,7 @@ You will never encounter a place object in the messages, but other concrete clas
     "ServicingVehicleGUID": null,
     "ServiceCount":0,
 
+    "SpotState":"Available",
     "Action":"Load",
     "OwnerWayId":745932,
     "OwnerGUID":"2248d535-3daf-4a86-b1e1-4951a22beec6",
@@ -179,9 +181,9 @@ The `QueuePrimarySpotV1` is always required to reach a spot and it’s the first
     "ServicingVehicleGUID": "2248d535-3daf-4a86-b1e1-4951a22beec6",
     "ServiceCount": 26,
 
+    "QueueState": "Available",
     "Capacity": 4,
     "CapacityUsed": 1,
-    "QueueState": "Open",
     "LinkWayId": 111
 }
 
@@ -226,10 +228,9 @@ Note that this object is usually contained in an array.  But this example is for
   "ServicingVehicleGUID": null,
   "ServiceCount":0,
 
+  "QueueState":"Full",
   "Capacity":1,
   "CapacityUsed":1,
-  "Action":"Load",
-  "QueueState":"Full",
   "ParentQueueId":[73185]
 }
 
