@@ -5,8 +5,10 @@ Find below the Specification for the Version 1 protocol for the spot service of 
 - [Spot Message](#spot-service)
 - [Autonomous Truck Message](#Autonomous-truck-messaging)
 
-> NOTE that all examples are formatted for your convenience and viewing pleasure.  It is not expected that the messages will contain all these new lines, tabs & spaces so a human can read it. The indentataion can't be programatically relied upon, it's just there to delight your brain.
+> NOTE: All JSON examples in this documentation are formatted for your convenience and viewing pleasure.  It is not expected that messages exchanged on the wire will contain new lines, tabs & spaces so a human can read it. So the indentataion can't be programatically relied upon (like that dumb yaml), the formatting is just there to delight your brain. <br> The protocol does **not preclude** the messages to be beautified prettified on the wire if that's what you like.
 ---
+
+<br>
 
 # Class
 ### [Place](class_PlaceV1.md#place)
