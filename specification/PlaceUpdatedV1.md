@@ -1,9 +1,9 @@
-# MessageV1
-A summary of what it does
+# PlaceUpdatedV1
+This message is sent spontaneously to all connected clients when a place is changed.
 
 |Sender| Triggered by | Triggers|
 |---|---|---|
-| `spot` \|\| 'AHS' \|\| 'client'| `message` \|\| "real works event" | `message` \|\| "real works event" |
+| `spot` | `ChangeSequence` change on any Place | local cache update for clients|
 
 <br>
 
@@ -19,15 +19,23 @@ A summary of what it does
 This message is used when an event triggers it in a very special case under specific circumstances.
 
 ## Example
-This example would be for a future version that would support multiple scopes.
+A spot that was closed was just open by a miner.
 ```json
 {
   "Protocol":"Open-Autonomy",
   "Version": 1,
   "Timestamp": "2023-01-24T09:30:10.948Z",
 
-  "V1":
+  "PlaceUpdatedV1":
   {
+    "SpotV1":
+    {
+      "PlaceId": 731854,
+      "PlaceState": "Open",
+      "ChangeSequence": 84,
+      "SpotState": "Available"
+    }
   }
 }
+
 ```
