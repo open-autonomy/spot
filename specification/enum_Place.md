@@ -7,6 +7,7 @@ Here is a list of all the enumerations we use
 - [`PlaceState`](#placestate-enumeration)
 - [`SpotState`](#spotstate-enumeration)
 - [`QueueState`](#queuestate-enumeration)
+- [`EntityType`](#entitytype-enumeration)
 
 <br>
 
@@ -94,6 +95,7 @@ These are TYPICAL spot types configurations at a mine site.  But any configurati
 |``"Available"``| There is still space in this queue|
 |``"Full"``| The queue is full, there are at least as many trucks queued there than the configured capacity of the queue.  Full is normal for Staging queues, but if a primary queue is full, then the trucks are not dispatched optimally from the FMS or the shovel might be over trucked.|
 
+<br>
 
 ## EntityType enumeration
 

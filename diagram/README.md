@@ -10,8 +10,7 @@ You will find below sequence diagrams and state machine diagrams to understand t
 <br>
 
 # Sequence Diagrams
-### Happy flow
-![Happy flow](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/open-autonomy/spot/main/diagram/SpotService_SequenceDiagram.puml)
+###  [Happy flow](HappyFlow.md)
 
 
 ---

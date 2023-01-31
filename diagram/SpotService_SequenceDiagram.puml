@@ -4,8 +4,8 @@ title /Spot service: Spotting and Queuing \n and Last Mile Dispatching for Open-
 
 
 'V0.7 - Jan. 2023
- 
-	Participant "Dispatcher\n(Person)" as dispatch
+
+	'Participant "Dispatcher\n(Person)" as dispatch
  	participant "Fleet Management\n(server)" as fms
 
 	'participant "Public /Map service" as map
@@ -13,9 +13,9 @@ title /Spot service: Spotting and Queuing \n and Last Mile Dispatching for Open-
 	participant "Onboard Autonomy\n(Vehicle) Truck-2" as uht2
 	participant "Onboard Autonomy\n(Vehicle) Truck-1" as uht1
 	participant "AHS\n(Client)" as ahs
-	
+
 box "HP solution with Spot Service" #EEEEFF
-    participant "Public Interface\n/Spot Service" as spot
+  participant "Public Interface\n/Spot Service" as spot
 	participant "Place\n database" as pdb
 	'participant "Last Mile\nDispatching" as lmd
 	participant "Proprietary HP\nShovel\nVehicle 77" as sho
@@ -50,7 +50,7 @@ ahs -> uht3: Follow this route and reach Area(L1), then get loaded at Shovel(77)
 uht1 -[#blue]> ahs: Hey boss, I'm near the end of the Haul Road, what do I do?
 ahs -[#blue]> spot: ApproachingLastMileV1(Truck-1, 111, Equipment, #077 )
 spot -[#blue]> ahs: OccupyPlace( Truck-1, QueueIDPrimary=Q1,\n QueueIDStage=null, SpotId=S1)\n + S1 object + Q1 object
-pdb -> spot: The spot S1 has changed state from Next to Reserved and both Q1 and S1 have ChangeSequence change.
+pdb -> spot: The spot S1 has changed state from Next to Reserved\n and both Q1 and S1 have ChangeSequence change.
 spot -> ahs: PlaceUpdated(S1 State=Reserved, sequence=X++, ...)
 spot -> ahs: PlaceUpdated(Q1 CapacityUsed=1, sequence=X++, ...)
 ahs -[#blue]> uht1: All right, I'm told you can whizz through {Q1 object}\n and continue to spot at this place: {S1 object}
