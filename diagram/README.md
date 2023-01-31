@@ -14,6 +14,7 @@ You will find below sequence diagrams and state machine diagrams to understand t
 ### Happy flow
 ![Happy flow](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/open-autonomy/spot/diagram/SpotService_SequenceDiagram.puml)
 
+![Happy flow](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://github.com/open-autonomy/spot/blob/main/diagram/SpotService_SequenceDiagram.puml)
 ---
 
 <br>
