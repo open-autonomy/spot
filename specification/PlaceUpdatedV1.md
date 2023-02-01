@@ -1,5 +1,6 @@
 # PlaceUpdatedV1
-This message is sent spontaneously to all connected clients when a place is changed.
+This message is sent spontaneously to all connected clients when a place is changed.  
+>NOTE: It is important to remmeber that the object will only contain the attributes that were modified.  The service will not send the entire object.  Because the `ChangeSequence` value will increment each time there is a change, then you can rely that this key will always be present in all PlaceUpdated messages.
 
 |Sender| Triggered by | Triggers|
 |---|---|---|
@@ -8,18 +9,21 @@ This message is sent spontaneously to all connected clients when a place is chan
 <br>
 
 ## Message attributes
-|key |value |format | Description|
-|---|:---:|:---:|---|
-|`""`||||
-|`""`||||
-|`""`||||
+
+||key |value |format | Description|
+|---|---|:---:|:---:|---|
+|OnlyOneOf:||||
+||[`"SpotV1"`](class_PlaceV1.md#spotv1)|N/A|object| **ONLY** the changed keys:value of the object will be sent.  Unchanged values shall be ommitted. |
+||[`"PrimaryQueueSpotV1"`](class_PlaceV1.md#primaryqueuespotv1)|N/A|object| **ONLY** the changed keys:value of the object will be sent.  Unchanged values shall be ommitted.|
+||[`"StagingQueueSpotV1"`](class_PlaceV1.md#queuestagespotv1)|N/A|object| **ONLY** the changed keys:value of the object will be sent.  Unchanged values shall be ommitted.|
+
 
 
 ## Use Case:
-This message is used when an event triggers it in a very special case under specific circumstances.
+This message is used to update the local cache of client applications without having to re-send the entire database.  Minimizing bandwidth and Processing.
 
-## Example
-A spot that was closed was just open by a miner.
+## Example 1
+A spot that was previously closed was just open by a miner.
 ```json
 {
   "Protocol":"Open-Autonomy",
