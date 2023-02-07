@@ -50,7 +50,6 @@ Find below the Specification for the Version 1 protocol for the spot service of 
 
 # Autonomous truck messaging
 ### [ApproachingLastMileV1](ApproachingLastMileV1.md)
-### [ApproachingPlaceV1](ApproachingPlaceV1.md)
 ### [LastMileDispatchingQuitV1](LastMileDispatchingQuitV1.md)
 ### [LeftPlaceV1](LeftPlaceV1.md)
 ### [OccupyingPlaceV1](OccupyingPlaceV1.md)
