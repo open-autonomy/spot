@@ -13,7 +13,7 @@ This message represents what is called a **truck kickout** in the industry.  Thi
 ## Message attributes
 |key |value |format | Description|
 |---|:---:|:---:|---|
-|`"PlaceId"`| WayId| integer| The spot an operator wants the truck to vacate.|
+|`"PlaceId"`| WayId| uint_64| The spot an operator wants the truck to vacate.|
 |`"VehicleId"`| VehicleId| UUID| The vehicle that need to leave the spot.|
 
 
