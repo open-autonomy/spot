@@ -58,6 +58,19 @@ The truck was dispatched to an over the edge dump (or paddock) in an open area a
   }
 }
 ```
+Example 2, formatted differently
+```json
+{
+  "ApproachingLastMileV1": {
+    "VehicleId": "83ae4aab-11bd-43bb-a630-a2baf199a700",
+    "FromWayId": 100048,
+    "ToType": "Area",
+    "AreaId": 100117 },
+  "Protocol": "Open-Autonomy",
+  "Version": 1,
+  "Timestamp": "2023-02-07T17:52:10.1746710Z"    }
+```
+
 > NOTE: We may want to change the auto-kickout to a kickout specified by the Spot service to prevent traffic deadlock, but typically traffic deadlock is not a problem for exiting the dumping area.  Doing this would also make the messaging pattern symmetric for loading and dumping, but symmetry alone does not feel like a good excuse to implement this.)
 
 
