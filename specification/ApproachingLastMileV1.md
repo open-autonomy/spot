@@ -1,6 +1,6 @@
 # ApproachingLastMileV1
 
-This message is send by AHS to enter a specific truck into the last mile dispatching service when the truck is getting close to an open area.
+This message is sent by AHS to enter a specific truck into the last mile dispatching service when the truck is getting close to an open area.
 
 |Sender| Triggered by | Triggers|
 |---|---|---|
@@ -84,7 +84,7 @@ A dispatcher is requested by maintenance to park a specific truck (that has an a
   "Version": 1,
   "Timestamp": "2018-10-31T09:30:10.435Z",
 
-  "ApproachingPlaceV1":
+  "ApproachingLastMileV1":
   {
 	"VehicleId": "e4de3723-a315-4506-b4e9-537088a0eabf",
 	"FromWayId": 731854,
