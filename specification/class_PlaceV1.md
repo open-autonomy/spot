@@ -6,7 +6,7 @@ The spot messages include a few objects that are embedded as complex attributes.
 - [`Primary Queue`](#primaryqueuespotv1)
 - [`Staging Queue`](#queuestagespotv1)
 
->PLEASE NOTE: Below is an object oriented model of the Spot & queues.  The JSON messages are  flattened versions of that and there is only 3 concrete objects of types { Spot, Queue and Stage}.  So don’t be confused by the models below and that you don't see this structure in the the flatten JSON in the messages.
+>PLEASE NOTE: Below is an object oriented model of the Spot & queues.  The JSON messages are  flattened versions of that and there is only 3 concrete objects of types {Spot, Queue and Stage}.  So don’t be confused by the models below and that you don't see this structure in the the flatten JSON in the messages.
 
 ![Class hierarchy graphics](../draw.io/Class_Place.drawio.svg)
 
@@ -27,7 +27,7 @@ You will never encounter a place object in the messages, but other concrete clas
 | `"TimeCreation"` | timestamp | ISO 8601 | Timestamp when this place (spot/queue) was created. A UTC Time (+0 Zulu) with format \<YYYY-MM-DD\>T <HH:mm:ss[.sss]>Z.  Milliseconds are optional and should only be added if meaningful.   |
 |`"PlaceId"`| PlaceId | uint_64| Unique ID for the entire Spot Service that identifies a Place (Spot, primary queue, staging queue, …)  All places share the same ID space, this is to minimize the risk of bugs due to managing different ID spaces for the different child classes. further 2^64 is wide enough to accommodate all the places.|
 |`"Latitude"`| &#177;90 degree |float| position on earth in LLE using WGS84.  NOTE: LLE can change if the place is re-positioned by the operator.  The float will typically require 7 decimals to reach centimeter level of resolution. North of equator is positive, while a negative means south of equator.|
-|`"Longitude"`|&#177;180 degree|float|The longitude of the spot on hearth.  Requires enough decimals to achieve the accuracy sought for the application (typically 6 to 7).  East of Greenwich is positive, while a negative means West of Greenwich.|
+|`"Longitude"`|&#177;180 degree|float|The longitude of the spot on Earth.  Requires enough decimals to achieve the accuracy sought for the application (typically 6 to 7).  East of Greenwich is positive, while a negative means West of Greenwich.|
 |`"Elevation"`|meter above see level|float|The distance in meter above (positive) or (negative) below the theoretical sea level at that coordinate.  This coordinate is not typically used for vehicles that don’t control their elevation (fly).  Typically 2 decimals.|
 |`"Heading"`| 0-359 degrees|integer|Compass heading in degrees of the front of the spot.  Where the vehicle's front should point when spotted|
 |`"PlaceIO"`|[`PlaceIO`](enum_Place.md#placeio-enumeration)|enum| How to Ingress & Egress that place See [`PlaceIO`](enum_Place.md#placeio-enumeration). |
@@ -53,8 +53,8 @@ You will never encounter a place object in the messages, but other concrete clas
 |---|:---:|:---:|---|
 |include <br>[`"Place"`](#place-attributes)|N/A|N/A| Reference [`"Place"`](#place-attributes)|
 |`"Action"`| [`Task`](enum_Place.md#task-enumeration) |enum| What the truck is expected to do once it has spotted.|
-|`"OwnerWayId"`| WayId |integer| An Area or Path WayId defined in the Map service where this spot is contained.  Spots are typically created in real time in an open area.  But there are certain exceptions where they can be staticky defined on a road. |
-|`"OwnerGUID"`| VehicleId|UUID<br>`nullable`| If this spot was created by a piece of equipment, then this field must be set to the equipment GUID.  If it’s staticaly defined through a surveyed import, then it must be set to null. |
+|`"OwnerWayId"`| WayId |integer| An Area or Path WayId defined in the Map service where this spot is contained.  Spots are typically created in real time in an open area.  However, there are certain exceptions where they can be statically defined on a road. |
+|`"OwnerGUID"`| VehicleId|UUID<br>`nullable`| If this spot was created by a piece of equipment, then this field must be set to the equipment GUID.  If it’s statically defined through a surveyed import, then it must be set to null. |
 |`"ServiceChain"`|see [`ServiceChain`](#servicechainv1)| ArrayOf `[ServiceChain]`|All the defined ways to reach this spot.  A spot can’t exist without at least one chain.  A chain must have a minimum of one primary queue to exist.|
 |`"SpotState"`|[`SpotState`](enum_Place.md#spotstate-enumeration)| enum| The state of the spot.  This field is very dynamic in the lifecycle of a spot.|
 
@@ -105,14 +105,14 @@ You will never encounter a place object in the messages, but other concrete clas
 <br><br>
 
 # ServiceChain
-A service chain documents all the different ways, through places, a vehicle can navigate to reach this spot.  In a large area or a complex situation like near the crusher, there might be multiple queues that can feed a single spot.  But for most situation, there will only be a single primary queue to reach a spot, that simple !
+A service chain documents all the different ways, through places, a vehicle can navigate to reach this spot.  In a large area or a complex situation like near the crusher, there might be multiple queues that can feed a single spot.  But for most situation, there will only be a single primary queue to reach a spot, that simple!
 
 **By Design**, this model
 - Forces that 2 primary queues can’t be linked to each other, because a service chain can only hold one Primary queue.
 - Queues can be created before a spot exists and before a free open space area exists.
 
 **Spot Service Behavior Conventions**
-- The spot server should automatically create a Primary queue near the end of each WayId that are not connected to another WayId.  Normally they are ingress wayId that enters an autonomous open area.
+- The spot server should automatically create a Primary queue near the end of each WayId that are not connected to another WayId.  Normally they are the ingress wayId to enter an autonomous open area.
 - There should only be a single Primary queue per ingress WayId.  If it is required to reach a destination through multiple paths then use Staging queues to do so.
 - Only a staging queue can merge 2 or more **queues** connected at its ingress.
 - Only a staging queue can split its egress to conenct to 2 or more **queues**.

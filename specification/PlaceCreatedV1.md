@@ -4,7 +4,7 @@ This message is sent to all connected `client` applications when a new `Place` i
 - `PrimaryQueue`
 - `StagingQueue`
 
->NOTE: It will be rare that multiple spots and queues are created at the same time.  So to simplify the implementation, we have elected to use one message per `Place` created.  Currently places are not expeted to be sent as an array or have multiple `Place`s objects per message.
+>NOTE: It will be rare that multiple spots and queues are created at the same time.  So to simplify the implementation, we have elected to use one message per `Place` created.  Currently places are not expected to be sent as an array or have multiple `Place`s objects per message.
 
 <br>
 
@@ -24,7 +24,7 @@ This message is sent to all connected `client` applications when a new `Place` i
 
 
 ## Use Case:
-This message is used when an event triggers it in a very special case under specific circumstances.  We hope this explanaion clarifies everything and is not too verbose in its layout of the sequence of events that leads to its usage.
+This message is used when an event triggers it in a very special case under specific circumstances.  We hope this explanation clarifies everything and is not too verbose in its layout of the sequence of events that leads to its usage.🤔
 
 ## Example 1
 The shovel operator is preparing to load trucks at a new location.  The operator moves the bucket where the truck is wanted, then through the shovel HMI (likely a digital input) the operator creates a new spot position at ground level right under the current bucket position.

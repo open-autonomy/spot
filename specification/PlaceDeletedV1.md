@@ -1,5 +1,5 @@
 # PlaceDeletedV1
-This message is pushed by the spot server when `Place`s are destroyed from the system.  Typically caused by an equipment operator is stopping or moving somwhere far.  The message will contain one or more `Place` that no longer exists and the client application receiving the message should purge these objects from its local cache.
+This message is pushed by the spot server when `Place`s are destroyed from the system.  Typically caused by an equipment operator is stopping or moving somewhere distant.  The message will contain one or more `Place` that no longer exist and the client application receiving the message should purge these objects from its local cache.
 
 |Sender| Triggered by | Triggers|
 |---|---|---|
@@ -14,7 +14,7 @@ This message is pushed by the spot server when `Place`s are destroyed from the s
 
 
 ## Use Case:
-This message will be sent when a High Precision system is turned off and the spots associated with the equipemnt will be destroyed.  When an area is deleted from the map, the user has the option to delete all spots and queues inside that ara.
+This message will be sent when a High Precision system is turned off and the spots associated with the equipment will be destroyed.  When an area is deleted from the map, the user has the option to delete all spots and queues inside that ara.
 
 
 ## Example
