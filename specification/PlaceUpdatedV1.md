@@ -1,6 +1,6 @@
 # PlaceUpdatedV1
 This message is sent spontaneously to all connected clients when a place is changed.  
->NOTE: It is important to remmeber that the object will only contain the attributes that were modified.  The service will not send the entire object.  Because the `ChangeSequence` value will increment each time there is a change, then you can rely that this key will always be present in all PlaceUpdated messages.
+>NOTE: It is important to remember that the object will only contain the attributes that were modified.  The service will not send the entire object.  Because the `ChangeSequence` value will increment each time there is a change, you can rely that this key will always be present in all PlaceUpdated messages.
 
 |Sender| Triggered by | Triggers|
 |---|---|---|
@@ -20,7 +20,7 @@ This message is sent spontaneously to all connected clients when a place is chan
 
 
 ## Use Case:
-This message is used to update the local cache of client applications without having to re-send the entire database.  Minimizing bandwidth and Processing.
+This message is used to update the local cache of client applications without having to re-send the entire database.  Minimizing bandwidth and processing.
 
 ## Example 1
 A spot that was previously closed was just open by a miner.

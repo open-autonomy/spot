@@ -6,7 +6,7 @@ Find below the Specification for the Version 1 protocol for the spot service of 
 - [Autonomous Truck Message](#Autonomous-truck-messaging)
 - [FMS Message](#fms-messaging)
 
-> NOTE: All JSON examples in this documentation are formatted for your convenience and viewing pleasure.  It is not expected that messages exchanged on the wire will contain new lines, tabs & spaces so a human can read it. So the indentataion can't be programatically relied upon (like that dumb yaml), the formatting is just there to delight your brain. <br> The protocol does **not preclude** the messages to be beautified prettified on the wire if that's what you like.
+> NOTE: All JSON examples in this documentation are formatted for your convenience and viewing pleasure.  It is not expected that messages exchanged on the wire will contain new lines, tabs & spaces so a human can read it. So the indentataion can't be programmatically relied upon (like that dumb yaml), the formatting is just there to delight your brain. <br> The protocol does **not preclude** the messages to be beautified prettified on the wire if that's what you like.
 ---
 
 <br>

@@ -6,7 +6,7 @@ This message represents what is called a **truck kickout** in the industry.  Thi
 
 |Sender| Triggered by | Triggers|
 |---|---|---|
-| `spot` | Shovel HMI telling the Spot service the shovel operator is done loading. | Truck leaving the spot and executing a new FMS assignmant. |
+| `spot` | Shovel HMI telling the Spot service the shovel operator is done loading. | Truck leaving the spot and executing a new FMS assignment. |
 
 <br>
 

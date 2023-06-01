@@ -1,13 +1,14 @@
 # enum Place
 
 Here is a list of all the enumerations we use  
-- [`PlaceIO`](#placeio-enumeration)
-- [`Task`](#task-enumeration)
-- [`Origin`](#origin-enumeration)
-- [`PlaceState`](#placestate-enumeration)
-- [`SpotState`](#spotstate-enumeration)
-- [`QueueState`](#queuestate-enumeration)
-- [`EntityType`](#entitytype-enumeration)
+- [enum Place](#enum-place)
+  - [PlaceIO enumeration](#placeio-enumeration)
+  - [Task enumeration](#task-enumeration)
+  - [Origin enumeration](#origin-enumeration)
+  - [PlaceState enumeration](#placestate-enumeration)
+  - [SpotState enumeration](#spotstate-enumeration)
+  - [QueueState enumeration](#queuestate-enumeration)
+  - [EntityType enumeration](#entitytype-enumeration)
 
 <br>
 
@@ -82,7 +83,7 @@ These are TYPICAL spot types configurations at a mine site.  But any configurati
 |`"Next"`| This is a spot that is open and available and it will be the next one to be dispensed by the /spot service to a truck requesting *Any* open spot in that destination.  There will only be one NEXT spot per [Parent&type] that is servicing a destination.  e.g. This means that if there are over the edge spots and paddock spots in one area, then there will be 2 spots in the Next substate, one of the over the edge type and one of the paddock dumping type. When multiple spots are open to serve a single source, then it’s useful to know which one will be used next.|
 |`"Reserved"`|A vehicle has requested exclusive usage of this spot and the /spot server has granted it to that vehicle.  But the vehicle is on its way there and has not stopped at that location yet.  This also indicates that no other vehicle can use that spot.|
 |`"Full"`|A vehicle is immobilized in that spot and is doing executing its task there.  When the truck’s task is to interact with another vehicle, Full also indicates to the other vehicle (like a loading equipment) that the truck is ready and won’t move until it is told to do so.  The spot will remain full until the truck releases this resource.  This also indicates that no other vehicle can use that spot or will be successful at reserving it.|
-|`"Exhausted"`|This is an optional state that is used to automatically “close” a spot until it gets “replenished” by an external agent.  This is useful for over the edge dumping where after a set number of dumps, you’d want a dozer to go cleanup, push material and renew the berm (windrow).  The same method could be used for paddock dumping and set a single usage for each dumping point, until a dozer flattens the new lift.  It could also be used by a shovel operator to constraint the number of trucks that the FMS will be dispatched to it before a long tram.  This is a user controlled way to tells the overall system (FMS, AHS, Spot) to expect a delay before the re-opening of that spot and use other spots in the meantime.  Without having a person continuously glued to a screen and close spots just in time after a truck has used it for a set amount of time.|
+|`"Exhausted"`|This is an optional state that is used to automatically “close” a spot until it gets “replenished” by an external agent.  This is useful for over the edge dumping where after a set number of dumps, you’d want a dozer to go cleanup, push material and renew the berm (windrow).  The same method could be used for paddock dumping and set a single usage for each dumping point, until a dozer flattens the new lift.  It could also be used by a shovel operator to constrain the number of trucks that the FMS will be dispatched to it before a long tram.  This is a user controlled way to tell the overall system (FMS, AHS, Spot) to expect a delay before the re-opening of that spot and use other spots in the meantime, without having a person continuously glued to a screen and closing spots just in time after a truck has used it for a set amount of time.|
 
 
 
