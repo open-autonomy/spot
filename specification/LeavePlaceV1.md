@@ -15,7 +15,7 @@ This message represents what is called a **truck kickout** in the industry.  Thi
 |---|:---:|:---:|---|
 |`"PlaceId"`| WayId| uint_64| The spot an operator wants the truck to vacate.|
 |`"VehicleId"`| VehicleId| UUID| The vehicle that need to leave the spot.|
-|`"LastMileId"` | LastMileId | UUID | The UUID identifying last mile.|
+|`"LastMileId"` | DispatchingId | UUID | A unique ID for this dispatching that will remain the same throught the process of dispatching the truck to the spot and until the truck is released from the Last Mile dispatching process.|
 
 
 
