@@ -15,6 +15,7 @@ This message represents what is called a **truck kickout** in the industry.  Thi
 |---|:---:|:---:|---|
 |`"PlaceId"`| WayId| uint_64| The spot an operator wants the truck to vacate.|
 |`"VehicleId"`| VehicleId| UUID| The vehicle that need to leave the spot.|
+|`"LastMileId"` | LastMileID | UUID | The UUID identifying last mile.|
 
 
 
@@ -32,7 +33,8 @@ The truck 2248...eec6 spotted at 731854 is told leave.  The shovel operator is d
   "LeavePlaceV1":
   {
     "PlaceId": 731854,
-    "VehicleId": "2248d535-3daf-4a86-b1e1-4951a22beec6"
+    "VehicleId": "2248d535-3daf-4a86-b1e1-4951a22beec6",
+    "LastMileId":"23456756-aa34-5742-9b66-08a5d4294f34"
   }
 }
 ```
