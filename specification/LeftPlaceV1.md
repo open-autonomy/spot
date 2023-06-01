@@ -13,6 +13,7 @@ The truck sends this message when it leaves a `Place` (queue or spot).  This let
 |key |value |format | Description|
 |---|:---:|:---:|---|
 |`"VehicleId"`| VehicleId | UUID| The vehicle that has just left the place|
+|`"LastMileId"` | LastMileId | UUID | The UUID identifying last mile.|
 |`"PlaceId"`| PlaceId |uint_64| The identidy of the place the truck has just left |
 
 
@@ -33,6 +34,7 @@ This example would be for a future version that would support multiple scopes.
   "LeftPlaceV1":
   {
     "VehicleId": "be87fb7e-9eb6-11ed-a8fc-0242ac120002",
+    "LastMileId":"23456756-aa34-5742-9b66-08a5d4294f34",
     "PlaceId": 731889
   }
 }
