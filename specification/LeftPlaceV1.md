@@ -13,7 +13,7 @@ The truck sends this message when it leaves a `Place` (queue or spot).  This let
 |key |value |format | Description|
 |---|:---:|:---:|---|
 |`"VehicleId"`| VehicleId | UUID| The vehicle that has just left the place|
-|`"LastMileId"` | LastMileId | UUID | The UUID identifying last mile.|
+|`"LastMileId"` | DispatchingId | UUID | A unique ID for this dispatching that will remain the same throught the process of dispatching the truck to the spot and until the truck is released from the Last Mile dispatching process.|
 |`"PlaceId"`| PlaceId |uint_64| The identidy of the place the truck has just left |
 
 
