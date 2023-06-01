@@ -11,7 +11,7 @@ This message is sent by AHS to enter a specific truck into the last mile dispatc
 ||key |value |format | Description|
 |---|---|:---:|:---:|---|
 || `"VehicleId"` | VehicleID | UUID | The UUID identifying the vehicle defined in the fleet definition. |
-|| `"LastMileId"` | LastMileID | UUID | A unique ID for this dispatching that will remain the same throught the process of dispatching the truck to the spot and until the truck is released from the Last Mile dispatching  or reports quitting last mile |
+|| `"LastMileId"` | DispatchingId | UUID | A unique ID for this dispatching that will remain the same throught the process of dispatching the truck to the spot and until the truck is released from the Last Mile dispatching  or reports quitting last mile |
 || ``"FromWayId"`` | WayID | integer | The ID of the road segment the vehicle will enter the open area.  The source of this ID is from the Map, provided by the map service. |
 || ``"ToType"`` |  oneOf : [``"Equipment"``, ``"Area"``, ``"Place"``] | enum [`EntityType`](enum_Place.md#entitytype-enumeration) | Identifies the type of entity the vehicle wants to reach. This will be used to identify which of the 3 attributes holds the destination entity ID in the JSON.  At the time of this writing, a Road is not supported.|
 |OneOf:||||
