@@ -16,7 +16,7 @@ The way the electronic driver tells the spot service it has reached a `Place`.  
 |key |value |format | Description|
 |---|:---:|:---:|---|
 |`"VehicleId"`| VehicleId | UUID| The vehicle that is occupying the place|
-|`"LastMileIdId"`| DispatchingId | UUID| A unique ID for this dispatching that will remain the same throught the process of dispatching the truck to the spot and until the truck is released from the Last Mile dispatching process.|
+|`"LastMileId"`| DispatchingId | UUID| A unique ID for this dispatching that will remain the same throught the process of dispatching the truck to the spot and until the truck is released from the Last Mile dispatching process.|
 |`"PlaceId"`| PlaceId |uint_64| The identidy of the place the truck is occupying |
 
 
