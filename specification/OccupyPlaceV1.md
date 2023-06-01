@@ -23,7 +23,7 @@ The message envelop will also contain a copy of all objects representing the res
 |key |value |format | Description|
 |---|:---:|:---:|---|
 |``"VehicleId"``| VehicleId| UUID| Identification of the vehicle that is receiving the dispatching instructions.|
-|``"LastMileId"``| DispatchingId| UUID| A unique ID for this dispatching that will remain the same throught the process of dispatching the truck to the spot and until the truck is released from the Last Mile dispatching process. A truck requesting to Quit the last mile dispatching process will also reset this ID.|
+|``"LastMileId"``| DispatchingId| UUID| A unique ID for this dispatching that will remain the same throught the process of dispatching the truck to the spot and until the truck is released from the Last Mile dispatching process.|
 |``"QueueIdPrimary"`` |PlaceId|uint_64| This value is **not nullable**. It can either be 0, and that means that the vehicle does not have permission to use the Primary queue. Or it can be a valid PlaceId representing a primary queue and that means that the truck has permission to use (be in) the primary queue.|
 |``"QueueIdStage"`` |PlaceId|ArrayOf `[uint_64]` <br> `nullable`| A null value means that there are no staging queues in this dispatch.  As such an empty array `[]` is **invalid** and should be considered a bug.  The array will either contain one or more {zeros or staging queue IDs} depending if the truck has permission to use the staging queue or not. |
 |``"SpotId"`` |PlaceId|uint_64| This value is **not nullable**. It can either be 0, and that means that the vehicle does not have permission to use the spot. Or it can be a valid PlaceId representing a spot and that means that the truck has permission to use (be in) the spot.|
