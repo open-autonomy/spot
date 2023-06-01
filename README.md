@@ -8,7 +8,7 @@ This section will explain the Spot service requirements, use cases and specify t
 <br>
 
 # Introduction
-This repo is dedicated at documenting the Spot service.  One of the services used in the open-autonomy family.
+This repo is dedicated to documenting the Spot service, one of the services used in the open-autonomy family.
 
 <br>
 
@@ -80,7 +80,7 @@ A truck is considered “Spotted” once it has stopped moving within the desire
 # What is an Origin ?
 An origin is defined as an *a priori* agreed upon reference point that each truck can translate to their local coordinate system.  So a spot position sent to the truck is always in reference to one of these specific origin.
 
-Because specific mining use cases, different spots will care about a specific part of the truck to aligning with somthing external lke:
+Because specific mining use cases, different spots will care about a specific part of the truck to aligning with something external lke:
 - other vehicles,
 - other equipment or
 - earth works  (berms, v-drains)

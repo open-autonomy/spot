@@ -1,7 +1,7 @@
 # PlaceCommandV1
 This message is used to request a copy of all the `Places` currently defined in the system.  This message may not be useful for most client applications.  It could be used if part of the client application has lost its context but kept the connection open and wants to rebuilt its cache of all the places again.
 
-> NOTE: When a new connection is established to the spot service, the Spot service will automatically send a `PlaceAllV1` message without the client requesting it.  This message can re-initiates this message without having to disconnect.  Further, the spot service will automatically send differential updates to the `Places` as they are modified so if the client application keeps its cache updated, it should not need to use this message.
+> NOTE: When a new connection is established to the spot service, the Spot service will automatically send a `PlaceAllV1` message without the client requesting it.  This message can re-initiate this message without having to disconnect.  Further, the spot service will automatically send differential updates to the `Places` as they are modified so if the client application keeps its cache updated, it should not need to use this message.
 
 
 |Sender| Triggered by | Triggers|
@@ -17,7 +17,7 @@ This message is used to request a copy of all the `Places` currently defined in 
 | `"Method"` | ``"GET"`` | string | Identifies the command. Currently only `"GET"` is supported.|
 | `"Scope"` | path | string| Currently there are only 2 path supported : `"/"` and `"/summary"`.|
 
-When the path ends with the reversed word `/summary`, then the service will only returns the **meta data** of the path of the Spot "database".
+When the path ends with the reserved word `/summary`, then the service will only return the **meta data** of the path of the Spot "database".
 In the future, we plan on providing the ability to specify a lower scope as the path to retrieve a subset of the "database" like `"/pit1/"` or `"/pit1/eastParking/"`.
 
 

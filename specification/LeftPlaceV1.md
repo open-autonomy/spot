@@ -1,5 +1,5 @@
 # LeftPlaceV1
-The truck sends this message when it leaves a `Place` (queue or spot).  This lets the Spot server know that it can now re-use this Place as it's now free because the truck has release its custody.  Now other trucks can use this resource.  The releasing should be done once the vehicle clears the place; say move one vehicle length from the spot.
+The truck sends this message when it leaves a `Place` (queue or spot).  This lets the Spot server know that it can now re-use this Place as it's now free because the truck has released its custody.  Now other trucks can use this resource.  The releasing should be done once the vehicle clears the place; say, move one vehicle length from the spot.
 
 
 |Sender| Triggered by | Triggers|
@@ -14,11 +14,11 @@ The truck sends this message when it leaves a `Place` (queue or spot).  This let
 |---|:---:|:---:|---|
 |`"VehicleId"`| VehicleId | UUID| The vehicle that has just left the place|
 |`"LastMileId"` | DispatchingId | UUID | A unique ID for this dispatching that will remain the same throught the process of dispatching the truck to the spot and until the truck is released from the Last Mile dispatching process.|
-|`"PlaceId"`| PlaceId |uint_64| The identidy of the place the truck has just left |
+|`"PlaceId"`| PlaceId |uint_64| The identity of the place the truck has just left |
 
 
 ## Use Case:
-Part of the spot ressource management.  The spot service will not redistribute permissions to a ressource that has not been released by `AHS`. Required when a truck has left
+Part of the spot ressource management.  The spot service will not redistribute permissions to a ressource that has not been released by `AHS`. Required when a truck has left:
 - the Primary queue
 - a Staging queue
 - a Spot
