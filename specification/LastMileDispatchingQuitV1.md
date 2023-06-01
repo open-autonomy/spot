@@ -11,6 +11,7 @@ This message is sent by `AHS` to tells the Spot Service that the spot service sh
 |key |value |format | Description|
 |---|:---:|:---:|---|
 |`"VehicleId"`| VehicleId | UUID| The vehicle that has just requested to quit being managed by the last mile dispatching process|
+|`"LastMileId"`| LastMileID | UUID| The UUID identifying last mile|
 
 
 ## Use Case:
@@ -27,7 +28,8 @@ While waiting in a queue to be loaded by a shovel, Truck `be87fb7e-9eb6-11ed-a8f
 
   "LastMileDispatchingQuitV1":
   {
-    "VehicleId": "be87fb7e-9eb6-11ed-a8fc-0242ac120002"
+    "VehicleId": "be87fb7e-9eb6-11ed-a8fc-0242ac120002",
+	  "LastMileId":"23456756-aa34-5742-9b66-08a5d4294f34"
   }
 
 }
