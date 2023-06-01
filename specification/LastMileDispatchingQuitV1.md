@@ -29,7 +29,7 @@ While waiting in a queue to be loaded by a shovel, Truck `be87fb7e-9eb6-11ed-a8f
   "LastMileDispatchingQuitV1":
   {
     "VehicleId": "be87fb7e-9eb6-11ed-a8fc-0242ac120002",
-	  "LastMileId":"23456756-aa34-5742-9b66-08a5d4294f34"
+    "LastMileId":"23456756-aa34-5742-9b66-08a5d4294f34"
   }
 
 }
