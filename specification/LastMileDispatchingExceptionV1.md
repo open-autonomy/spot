@@ -1,5 +1,5 @@
 # LastMileDispatchingExceptionV1
-This message is sent by `AHS` to tells the `LastMileDispatching` that this vehicle hit a snag and can't reach its next position in the spotting chain, but that the vehicle intends to continue to the final destination after the exception is resolved via external means.  It also means that `AHS` is now expecting the `LastMileDispatching` to send it a new `OccupyPlace` message when the exception is resolved and when the truck can try again.
+This message is sent by `AHS` to tells the `LastMileDispatching` that this vehicle hit a snag and can't reach its next position in the service chain, but that the vehicle intends to continue to the final destination after the exception is resolved via external means.  It also means that `AHS` is now expecting the `LastMileDispatching` to send it a new `OccupyPlace` message when the exception is resolved and when the truck can try again.
 > NOTE-1 that the destination in the OccupyPlace message **could** change as a result of fixing the exception.<br>
 > NOTE-2 It is expected that the `AHS` wouls also send an ISO-23725 VehicleDiagnosticV2 to the FMS at the same time.
 

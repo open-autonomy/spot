@@ -55,7 +55,7 @@ Find below the Specification for the Version 1 protocol for the spot service of 
 ### [LeftPlaceV1](LeftPlaceV1.md)
 ### [OccupyingPlaceV1](OccupyingPlaceV1.md)
 ### [PlaceCommandV1](PlaceCommandV1.md)
-### [SetDynamicPathIDV1](SetDynamicPathIDV1.md)
+### [SetDynamicPathIdV1](SetDynamicPathIDV1.md)
 ---
 
 <br>
