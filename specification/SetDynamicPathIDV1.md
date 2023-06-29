@@ -33,7 +33,7 @@ AHS has computed a successful path intent and conveys this to the spot service.
   "SetDynamicPathIdV1":
   {
     "StartPlaceId": 731889,
-    "StartPlaceId": 731858,
+    "EndPlaceId": 731257,
     "DynamicPathId": 58311
   }
 }
@@ -49,7 +49,7 @@ AHS was unsuccessful at finding a theoretical path to reach the place.
   "SetDynamicPathIdV1":
   {
     "StartPlaceId": 731889,
-    "StartPlaceId": 731858,
+    "EndPlaceId": 731257,
     "DynamicPathId": 0
   }
 }
@@ -69,7 +69,7 @@ AHS wants to remove an intended path or delete an "I can't reach the place".
   "SetDynamicPathIdV1":
   {
     "StartPlaceId": 731889,
-    "StartPlaceId": 731858,
+    "EndPlaceId": 731257,
     "DynamicPathId": null
   }
 }
