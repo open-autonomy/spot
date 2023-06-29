@@ -1,5 +1,5 @@
 # LastMileDispatchingExceptionV1
-This message is sent by `AHS` to tells the `Last Mile Dispatching` that this vehicle hit a snag and can't reach its next position in the spotting chain, but that the vehicle intends to continue to the final destination after the exception is resolved via external means.  It also means that `AHS` is now expecting the `Last Mile dispatching` to send it a new `OccupyPlace` message when the exception is resolved and when the truck can try again.
+This message is sent by `AHS` to tells the `LastMileDispatching` that this vehicle hit a snag and can't reach its next position in the spotting chain, but that the vehicle intends to continue to the final destination after the exception is resolved via external means.  It also means that `AHS` is now expecting the `LastMileDispatching` to send it a new `OccupyPlace` message when the exception is resolved and when the truck can try again.
 > NOTE-1 that the destination in the OccupyPlace message **could** change as a result of fixing the exception.<br>
 > NOTE-2 It is expected that the `AHS` wouls also send an ISO-23725 VehicleDiagnosticV2 to the FMS at the same time.
 
@@ -17,7 +17,7 @@ This message is sent by `AHS` to tells the `Last Mile Dispatching` that this veh
 |`"VehicleId"`| VehicleId | UUID| The vehicle that has encountered a problem while being managed by the last mile dispatching process|
 |`"LastMileId"`| DispatchingId | UUID| A unique ID for this dispatching that will remain the same throught the process of last mile dispatching the truck to the spot and until the truck is released from the Last Mile dispatching process.|
 |`"PlaceId"`| WayId| uint_64|The next place the vehicle is trying to reach but has encountered an exception during its locomotion there|
-|`"ExceptionId"` | AHS Specific | uint_64 | An out of specification pre-agreed number that the last mile dispatching can use to match a human readable description of the exception and/or automate a workflow |
+|`"ExceptionId"` | AHS Specific | uint_64 | An out of specification, AHS specific and pre-defined number that the last mile dispatching can use to match with a human readable description of the exception and/or automate a workflow |
 |`"Description"`|`nullable` Human readable text|string| A human readable error message that explains what problem the truck has encountered and possibly a proposed resolution.  This field is optional, but it is expected that when null, the AHS has provided the LMD with documentation for each number with a description and possibly a remediation to the exception.
 
 
