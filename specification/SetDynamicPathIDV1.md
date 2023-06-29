@@ -17,7 +17,9 @@ This is the method for an AHS to tell **IF** and **HOW** it can reach a Place in
 
 > The Path service is part of the Open-Autonomy family of protocols.  Please reference the Path service documentation for the techincal details.
 
-> NOTE: in the future when there will be more than one AHS operating in the same area using the same Spot service, then this field will have to be replaced by an array[] of {AHS_UUID and PathId} pairs so each AHS can seperately voice their plans or grievances .  Or it coudl be done now at the cost of added complexity.
+> Discussion: We could change the message to be an array of Start-End structures{} as is't quite possible that there will be more than one path to save when a spot is created and there are more than one Primary queues in the area or that multiple staging quesues are used.  But I don't think the added complexity of an array outweighs the benefit of the simplicity of a single path per message.  For instance at boot up an AHS could decide to calcualte and save all the dynamic paths in the mine and that might require some sort of paging if there are too many.
+
+
 
 ## Use Case:
 This message is used when an event triggers it in a very special case under specific circumstances.
