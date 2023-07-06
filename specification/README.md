@@ -38,7 +38,7 @@ Find below the Specification for the Version 1 protocol for the spot service of 
 ### [OccupyPlaceV1](OccupyPlaceV1.md)
 ### [TaskStartV1](TaskStartV1.md)
 ### [LeavePlaceV1](LeavePlaceV1.md)
-### [ExpelVehicleV1](ExpelVehicleV1.md)
+### [VehicleDismissedV1](VehicleDismissedV1.md)
 # Cache Management
 ### [PlaceSummaryV1](PlaceSummaryV1.md)
 ### [PlaceAllV1](PlaceAllV1.md)
