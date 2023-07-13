@@ -1,19 +1,20 @@
 # OccupyPlaceV1
 
-An Occupy place message is a mini-dispatching instruction set on how to reach a spot while in an open area.  Historically, open areas were not managed by fleet management systems for manned systems.
+The Occupy place message is a mini-dispatching instruction set on how to reach a spot while in an open area.  Historically, open areas were not managed by fleet management systems for manned systems, so there is no equivalent in a manned operation.
 
 
 |Sender| Triggered by | Triggers|
 |---|---|---|
-|`Spot` | `ApproachingLastMileV1` message| nothing immediate|
+|`Spot` | `ApproachingLastMileV1` message| truck movement in open area|
 
 <br>
 
-This message gives explicit permissions, to a truck identified by the VehicleID, to use the listed resource(s). The message will including all the resources the truck currently possesses (not just added permissions).   The truck will have to Release each resource once it leaves that resource via the `LeftPlaceV1` message.  Even if the truck does not stop at the resource, the truck must release the place once it passes that LLE position so it’s released for other trucks to use.
+This message gives explicit permissions, to a truck identified by the VehicleID, to use the listed place(s). The message will including all the places the truck currently possesses (not just added permissions).   The truck will have to Release each Place once it leaves that resource via the [`LeftPlaceV1`](LeftPlaceV1.md) message.  Even if the truck does not stop at the resource, the truck must release the place once it passes that LLE position so it’s released for other trucks to use.
 
 A place permission value of `0` will be set to mean that the vehicle does NOT have permission for a place type.  Multiple `OccupyPlace` messages can be sent to the same truck during the last mile dispatching.  Each new message from the spot service overwrites the previous permissions.  A truck that has had its permission revoked while it was moving to THAT place that just got revoked must stop (in a controlled normal manner) and wait for a new `OccupyPlace` messages.
 
 > IMPORTANT NOTE: Previously granted resources can be removed or changed in a later OccupyPlace message.  
+
 
 The message envelop will also contain a copy of all objects representing the resources the vehicle is given permission to.  Not only is this convenient for the client software, it is primiraly there to prevent race conditions or the usage of stale cached objects on the client side.
 

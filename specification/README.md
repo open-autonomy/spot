@@ -38,6 +38,7 @@ Find below the Specification for the Version 1 protocol for the spot service of 
 ### [OccupyPlaceV1](OccupyPlaceV1.md)
 ### [TaskStartV1](TaskStartV1.md)
 ### [LeavePlaceV1](LeavePlaceV1.md)
+### [VehicleDismissedV1](VehicleDismissedV1.md)
 # Cache Management
 ### [PlaceSummaryV1](PlaceSummaryV1.md)
 ### [PlaceAllV1](PlaceAllV1.md)
@@ -50,11 +51,12 @@ Find below the Specification for the Version 1 protocol for the spot service of 
 
 # Autonomous truck messaging
 ### [ApproachingLastMileV1](ApproachingLastMileV1.md)
+### [LastMileDispatchingExceptionV1](LastMileDispatchingExceptionV1.md)
 ### [LastMileDispatchingQuitV1](LastMileDispatchingQuitV1.md)
 ### [LeftPlaceV1](LeftPlaceV1.md)
 ### [OccupyingPlaceV1](OccupyingPlaceV1.md)
 ### [PlaceCommandV1](PlaceCommandV1.md)
-### [SetDynamicPathIDV1](SetDynamicPathIDV1.md)
+### [SetDynamicPathIdV1](SetDynamicPathIDV1.md)
 ---
 
 <br>
