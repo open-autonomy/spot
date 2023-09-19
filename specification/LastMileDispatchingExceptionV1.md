@@ -16,7 +16,7 @@ This message is sent by `AHS` to tells the `LastMileDispatching` that this vehic
 |---|:---:|:---:|---|
 |`"VehicleId"`| VehicleId | UUID| The vehicle that has encountered a problem while being managed by the last mile dispatching process|
 |`"LastMileId"`| DispatchingId | UUID| A unique ID for this dispatching that will remain the same throught the process of last mile dispatching the truck to the spot and until the truck is released from the Last Mile dispatching process.|
-|`"PlaceId"`| WayId| uint_64|The next place the vehicle is trying to reach but has encountered an exception during its locomotion there|
+|`"PlaceId"`|`nullable` WayId| uint_64|The next place the vehicle is trying to reach but has encountered an exception during its locomotion there|
 |`"ExceptionId"` | AHS Specific | uint_64 | An out of specification, AHS specific and pre-defined number that the last mile dispatching can use to match with a human readable description of the exception and/or automate a workflow |
 |`"Description"`|`nullable` Human readable text|string| A human readable error message that explains what problem the truck has encountered and possibly a proposed resolution.  This field is optional, but it is expected that when null, the AHS has provided the LMD with documentation for each number with a description and possibly a remediation to the exception.
 
