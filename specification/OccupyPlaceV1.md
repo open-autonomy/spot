@@ -157,6 +157,7 @@ Vehicle `9ac95f3e-9eac-11ed-a8fc-0242ac120002` is granted permission to enter bu
 }
 ```
 
+
 ## Example 3
 Vehicle `9ac95f3e-9eac-11ed-a8fc-0242ac120002` is granted permission to go to the Spot 731854. In this example, there is one staging queue, 30476, where the truck is currently standing. The primary queue object is set to 0 since the truck has left and released the resource.
 
