@@ -207,6 +207,6 @@ Vehicle `9ac95f3e-9eac-11ed-a8fc-0242ac120002` is granted permission to go to th
         "LinkQueueStage":[ 30475,30477]
       }	   
     ]
-  },
+  }
 }
 ```
