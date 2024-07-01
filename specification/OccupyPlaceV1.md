@@ -156,3 +156,57 @@ Vehicle `9ac95f3e-9eac-11ed-a8fc-0242ac120002` is granted permission to enter bu
   }
 }
 ```
+
+## Example 3
+Vehicle `9ac95f3e-9eac-11ed-a8fc-0242ac120002` is granted permission to go to the Spot 731854. In this example, there is one staging queue, 30476, where the truck is currently standing. The primary queue object is set to 0 since the truck has left and released the resource.
+
+```json
+{
+  "Protocol":"Open-Autonomy",
+  "Version": 1,
+  "Timestamp": "2023-01-23T09:30:10.435Z",
+
+  "OccupyPlaceV1":
+  {
+    "VehicleId": "9ac95f3e-9eac-11ed-a8fc-0242ac120002",
+    "LastMileId": "25f079cf-472a-403c-86a8-e65754ce0eff",
+    "QueueIdPrimary": 0,
+    "QueueIdStage": [30476],
+    "SpotId": 731854
+  },
+
+  "SpotV1":
+  {
+    "TimeCreation":"2023-01-23T09:30:10.43.512Z",
+    "PlaceId":731854,
+    "Latitude":49.176854,
+    "Longitude":-123.0718,
+    "Elevation":22.69,
+    "Heading":68,
+    "PlaceIO":"BackIn",
+    "Origin":"Load",
+    "DynamicPathId":8456,
+    "ServiceMaxUtilization":null,
+    "PlaceState": "Opened",
+    "ChangeSequence": 3452,
+    "ServicingVehicleGUID": null,
+    "ServiceCount":0,
+    "Action":"Load",
+    "OwnerWayId":745932,
+    "OwnerGUID":"2248d535-3daf-4a86-b1e1-4951a22beec6",
+    "ServiceChain":
+    [
+      {
+        "LinkWayId": 945723,
+        "LinkQueuePrimary": 30354,
+        "LinkQueueStage":[ 30476 ]
+      },
+      {
+        "LinkWayId": 945361,
+        "LinkQueuePrimary": 30352,
+        "LinkQueueStage":[ 30475,30477]
+      }	   
+    ]
+  },
+}
+```
