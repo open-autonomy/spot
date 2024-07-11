@@ -170,6 +170,28 @@ Vehicle `9ac95f3e-9eac-11ed-a8fc-0242ac120002` is granted permission to go to th
     "SpotId": 731854
   },
 
+ "StagingQueueSpotV1":
+  {
+    "TimeCreation":"2018-10-31T09:30:10.43.512Z",
+    "PlaceId":30476,
+    "Latitude":49.176245,
+    "Longitude":-123.0734,
+    "Elevation":21.69,
+    "Heading":67,
+    "PlaceIO":"PullThrough",
+    "Origin":"Load",
+    "DynamicPathId":8456,
+    "ServiceMaxUtilization":null,
+    "PlaceState":"Open",
+    "ChangeSequence":836,
+    "ServicingVehicleGUID":"9ac95f3e-9eac-11ed-a8fc-0242ac120002",
+    "ServiceCount":0,
+    "QueueState":"Full",
+    "Capacity":1,
+    "CapacityUsed":1,
+    "ParentQueueId":[56982]
+  }
+
   "SpotV1":
   {
     "TimeCreation":"2023-01-23T09:30:10.43.512Z",
@@ -184,7 +206,7 @@ Vehicle `9ac95f3e-9eac-11ed-a8fc-0242ac120002` is granted permission to go to th
     "ServiceMaxUtilization":null,
     "PlaceState": "Opened",
     "ChangeSequence": 3452,
-    "ServicingVehicleGUID": 9ac95f3e-9eac-11ed-a8fc-0242ac120002,
+    "ServicingVehicleGUID":"9ac95f3e-9eac-11ed-a8fc-0242ac120002",
     "ServiceCount":0,
     "Action":"Load",
     "OwnerWayId":745932,
@@ -193,7 +215,7 @@ Vehicle `9ac95f3e-9eac-11ed-a8fc-0242ac120002` is granted permission to go to th
     [
       {
         "LinkWayId": 945723,
-        "LinkQueuePrimary": 30354,
+        "LinkQueuePrimary": 56982,
         "LinkQueueStage":[ 30476 ]
       },
       {
