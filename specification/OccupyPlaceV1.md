@@ -35,7 +35,7 @@ The message envelop will also contain a copy of all objects representing the res
 
 
 ## Example 1
-Vehicle 2248…beec6 is granted permission to go through the Primary queue directly down to the Spot 731854.  In this example, there is no staging queue (as it it set to `null`).  Because the truck has received 2 permissions, the message also includes the current state of the 2 places.
+Vehicle `2248d535-3daf-4a86-b1e1-4951a22beec6` is granted permission to go through the Primary queue directly down to the Spot 731854.  In this example, there is no staging queue (as it it set to `null`).  Because the truck has received 2 permissions, the message also includes the current state of the 2 places.
 
 ```json
 {
@@ -66,7 +66,7 @@ Vehicle 2248…beec6 is granted permission to go through the Primary queue direc
     "ServiceMaxUtilization":null,
     "PlaceState": "Opened",
     "ChangeSequence": 3452,
-    "ServicingVehicleGUID": null,
+    "ServicingVehicleGUID": "2248d535-3daf-4a86-b1e1-4951a22beec6",
     "ServiceCount":0,
     "Action":"Load",
     "OwnerWayId":745932,
@@ -75,14 +75,9 @@ Vehicle 2248…beec6 is granted permission to go through the Primary queue direc
     [
       {
         "LinkWayId": 945723,
-        "LinkQueuePrimary": 30354,
-        "LinkQueueStage":[ 30476 ]
-      },
-      {
-        "LinkWayId": 945361,
-        "LinkQueuePrimary": 30352,
-        "LinkQueueStage":[ 30475,30477]
-      }	   
+        "LinkQueuePrimary": 56982,
+        "LinkQueueStage":[]
+      }  
     ]
   },
 
@@ -108,7 +103,6 @@ Vehicle 2248…beec6 is granted permission to go through the Primary queue direc
       "QueueState": "Open",
       "LinkWayId": 111
   }
-
 
 }
 ```
@@ -147,12 +141,89 @@ Vehicle `9ac95f3e-9eac-11ed-a8fc-0242ac120002` is granted permission to enter bu
     "ServiceMaxUtilization": null,
     "PlaceState": "Available",
     "ChangeSequence": 9,
-    "ServicingVehicleGUID": "2248d535-3daf-4a86-b1e1-4951a22beec6",
+    "ServicingVehicleGUID": "9ac95f3e-9eac-11ed-a8fc-0242ac120002",
     "ServiceCount": 26,
     "Capacity": 4,
     "CapacityUsed": 1,
     "QueueState": "Open",
     "LinkWayId": 111
+  }
+}
+```
+
+
+## Example 3
+Vehicle `9ac95f3e-9eac-11ed-a8fc-0242ac120002` is granted permission to go to the Spot 731854. In this example, there is one staging queue, 30476, where the truck is currently standing. The primary queue object is set to 0 since the truck has left and released the resource.
+
+```json
+{
+  "Protocol":"Open-Autonomy",
+  "Version": 1,
+  "Timestamp": "2023-01-23T09:30:10.435Z",
+
+  "OccupyPlaceV1":
+  {
+    "VehicleId": "9ac95f3e-9eac-11ed-a8fc-0242ac120002",
+    "LastMileId": "25f079cf-472a-403c-86a8-e65754ce0eff",
+    "QueueIdPrimary": 0,
+    "QueueIdStage": [30476],
+    "SpotId": 731854
+  },
+
+ "StagingQueueSpotV1":
+  {
+    "TimeCreation":"2018-10-31T09:30:10.43.512Z",
+    "PlaceId":30476,
+    "Latitude":49.176245,
+    "Longitude":-123.0734,
+    "Elevation":21.69,
+    "Heading":67,
+    "PlaceIO":"PullThrough",
+    "Origin":"Load",
+    "DynamicPathId":8456,
+    "ServiceMaxUtilization":null,
+    "PlaceState":"Open",
+    "ChangeSequence":836,
+    "ServicingVehicleGUID":"9ac95f3e-9eac-11ed-a8fc-0242ac120002",
+    "ServiceCount":0,
+    "QueueState":"Full",
+    "Capacity":1,
+    "CapacityUsed":1,
+    "ParentQueueId":[56982]
+  }
+
+  "SpotV1":
+  {
+    "TimeCreation":"2023-01-23T09:30:10.43.512Z",
+    "PlaceId":731854,
+    "Latitude":49.176854,
+    "Longitude":-123.0718,
+    "Elevation":22.69,
+    "Heading":68,
+    "PlaceIO":"BackIn",
+    "Origin":"Load",
+    "DynamicPathId":8456,
+    "ServiceMaxUtilization":null,
+    "PlaceState": "Opened",
+    "ChangeSequence": 3452,
+    "ServicingVehicleGUID":"9ac95f3e-9eac-11ed-a8fc-0242ac120002",
+    "ServiceCount":0,
+    "Action":"Load",
+    "OwnerWayId":745932,
+    "OwnerGUID":"2248d535-3daf-4a86-b1e1-4951a22beec6",
+    "ServiceChain":
+    [
+      {
+        "LinkWayId": 945723,
+        "LinkQueuePrimary": 56982,
+        "LinkQueueStage":[ 30476 ]
+      },
+      {
+        "LinkWayId": 945361,
+        "LinkQueuePrimary": 30352,
+        "LinkQueueStage":[ 30475,30477]
+      }	   
+    ]
   }
 }
 ```
