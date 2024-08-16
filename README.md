@@ -48,6 +48,35 @@ The `truck origin` attribute of the spot identifies a location on the truck that
 3.	Axle
 4.	Rear
 5.	Pile
+<br>
+
+The mining use case will dictate which `truck origin` you will attach to a spot.  The benefit of using this high level approach of origins is that only the autonomous truck needs to know the distance offsets of these points in their local coordiante system, those offsets don't need to be shared with external systems. All other systems can reference the desired end state, and the trucks will manage to drive and spot with the appropriate offset from the front of the truck.
+
+Typical use of the `truck origin` is as follow:
+
+### Front
+Miners want the `front` of the truck to be at the spot position when trucks are 
+- queuing
+- parking in a back out bay
+- requested to wait at a location
+  
+### Load
+Operators will want the truck to spot using the `load` origin when they are using the bucket (or dipper) as the spot point, so the truck will position itself at the optimal position to receive the first load.  This would also be the origin to use for a loadout chute.
+
+### Axle
+Miners will want the truck to spot the rear `axle` at the spot location in these cases:
+- Crusher dumping
+- Over the edge dumping
+- V drain parking
+
+### Rear
+When miners want the `rear` of the tray to align at the spot position, typically:
+- Back in parking bays
+- Back in road dumping
+- Back in face dumping of over loaded trucks
+
+### Pile
+The `pile` origin is used with paddock dumping.  This means that once the truck has dumped a full load, then the pile top will be at that position.
 
 <br><br>
 
