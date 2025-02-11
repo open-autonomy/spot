@@ -9,8 +9,8 @@ The following table describes the changeset between Version 2 and Version 1 of t
 |---|---|
 | The placeId field for all messages has changed from `uint_64` to `uuid`. |
 | the FromWayId field in ApproachingLastMile has changed from required to optional to account for trucks requesting a last mile assignment while inside the destination area. |
-| A new OccupyPlaceV2 message has been created that simplifies communications with the AHT |
-| Place Cache | Removed PlaceCreatedV1, PlaceDeletedV1, PlaceUpdatedV1, PlaceSummaryV1, PlaceAllV1 |
+| A new OccupyPlaceV2 message has been created in order to simplify communications with the AHT and remove the need for cache management. |
+| Removed Cache Management as this information is now fully enclosed in the OccupyPlaceV2 message. |
  
 
 
@@ -28,11 +28,9 @@ Find below the Specification for the Version 2 protocol for the spot service of 
 <br>
 
 # Class
-### [Place](class_PlaceV1.md#place)
-### [Spot](class_PlaceV1.md#spotv1)
-### [Queue Primary](class_PlaceV1.md#primaryqueuespotv1)
-### [Queue Stage](class_PlaceV1.md#queuestagespotv1)
-### [Service Chain](class_PlaceV1.md#servicechain)
+### [Place](class_Place.md#place)
+### [Queue](class_Place.md#queue)
+### [Spot](class_Place.md#spot)
 ---
 
 <br>
@@ -51,28 +49,24 @@ Find below the Specification for the Version 2 protocol for the spot service of 
 # Spot Service
 ### [ServiceIdentification](ServiceIdentification.md)
 # Last Mile Dispatching
-### [OccupyPlaceV1](OccupyPlaceV1.md)
-### [TaskStartV1](TaskStartV1.md)
-### [LeavePlaceV1](LeavePlaceV1.md)
-### [VehicleDismissedV1](VehicleDismissedV1.md)
-# Cache Management
-### [PlaceSummaryV1](PlaceSummaryV1.md)
-### [PlaceAllV1](PlaceAllV1.md)
-### [PlaceCreatedV1](PlaceCreatedV1.md)
-### [PlaceDeletedV1](PlaceDeletedV1.md)
-### [PlaceUpdatedV1](PlaceUpdatedV1.md)
+### [OccupyPlaceV2](OccupyPlaceV2.md)
+### [OccupyPlaceResponseV1](OccupyPlaceResponseV1.md)
+### [TaskStartV2](TaskStartV2.md)
+### [TaskStartResponseV1](TaskStartResponseV1.md)
+### [LeavePlaceV2](LeavePlaceV2.md)
+### [LeavePlaceResponseV1](LeavePlaceResponseV1.md)
+### [VehicleDismissedV1](VehicleDismissedV2.md)
+### [VehicleDismissedResponseV1](VehicleDismissedResponseV1.md)
 ---
 
 <br>
 
 # Autonomous truck messaging
-### [ApproachingLastMileV1](ApproachingLastMileV1.md)
-### [LastMileDispatchingExceptionV1](LastMileDispatchingExceptionV1.md)
-### [LastMileDispatchingQuitV1](LastMileDispatchingQuitV1.md)
-### [LeftPlaceV1](LeftPlaceV1.md)
-### [OccupyingPlaceV1](OccupyingPlaceV1.md)
-### [PlaceCommandV1](PlaceCommandV1.md)
-### [SetDynamicPathIdV1](SetDynamicPathIDV1.md)
+### [ApproachingLastMileV1](ApproachingLastMileV2.md)
+### [LastMileDispatchingExceptionV1](LastMileDispatchingExceptionV2.md)
+### [LastMileDispatchingQuitV1](LastMileDispatchingQuitV2.md)
+### [LeftPlaceV1](LeftPlaceV2.md)
+### [OccupyingPlaceV1](OccupyingPlaceV2.md)
 ---
 
 <br>
