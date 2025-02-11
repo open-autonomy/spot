@@ -8,7 +8,7 @@ The spot messages include a few objects that are embedded as complex attributes.
 
 >PLEASE NOTE: Below is an object oriented model of the Spot & queues.  The JSON messages are  flattened versions of that and there is only 3 concrete objects of types {Spot, Queue and Stage}.  So don’t be confused by the models below and that you don't see this structure in the the flatten JSON in the messages.
 
-![Class hierarchy graphics](../draw.io/Class_Place.drawio.svg)
+![Class hierarchy graphics](../../draw.io/Class_Place.drawio.svg)
 
 ---
 

@@ -24,6 +24,24 @@ The spot service is meant to facilitate in-pit interactions between people in he
 
 <br>
 
+# Versions
+The spot specification is currently in [version 2](./specification/V2/README.md).  The previous version is still available for reference.
+
+The AHS must indicate which version of the protocol it supports by sending the following message. For instance, if the AHS supports version 2 of the protocol, it will send the following message:
+
+```json
+{
+  "Protocol":"Open-Autonomy",
+  "Version": 2,
+  "Timestamp": "2023-01-24T09:30:10.948Z",
+
+  "SpotServiceV1":
+  {
+	  "API": 2
+  }
+}
+```
+
 # What is a Spot ?
 A spot is a place in the mine where operators want a vehicle to precisely position itself and execute a mining task.
 
