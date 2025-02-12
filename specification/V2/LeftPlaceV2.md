@@ -31,7 +31,7 @@ This example would be for a future version that would support multiple scopes.
   "Version": 2,
   "Timestamp": "2023-01-24T09:30:10.948Z",
 
-  "LeftPlaceV1":
+  "LeftPlaceV2":
   {
     "VehicleId": "be87fb7e-9eb6-11ed-a8fc-0242ac120002",
     "LastMileId":"23456756-aa34-5742-9b66-08a5d4294f34",

@@ -8,7 +8,7 @@ The way the electronic driver tells the spot service it has reached a `Place`.  
 
 |Sender| Triggered by | May Trigger |
 |---|---|---|
-| `AHS`| Truck has reached the Place | `OccupyPlaceV1`  |
+| `AHS`| Truck has reached the Place | `OccupyPlaceV2`  |
 
 <br><br>
 
@@ -32,7 +32,7 @@ This example would be for a future version that would support multiple scopes.
   "Version": 2,
   "Timestamp": "2023-01-24T09:30:10.948Z",
 
-  "OccupyingPlaceV1":
+  "OccupyingPlaceV2":
   {
     "VehicleId": "be87fb7e-9eb6-11ed-a8fc-0242ac120002",
     "LastMileId": "a82291f2-f97d-45cf-bb5c-601a1dbd2641",

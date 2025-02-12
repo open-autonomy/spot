@@ -55,25 +55,16 @@ Find below the Specification for the Version 2 protocol for the spot service of 
 ### [TaskStartResponseV1](TaskStartResponseV1.md)
 ### [LeavePlaceV2](LeavePlaceV2.md)
 ### [LeavePlaceResponseV1](LeavePlaceResponseV1.md)
-### [VehicleDismissedV1](VehicleDismissedV2.md)
+### [VehicleDismissedV2](VehicleDismissedV2.md)
 ### [VehicleDismissedResponseV1](VehicleDismissedResponseV1.md)
 ---
 
 <br>
 
 # Autonomous truck messaging
-### [ApproachingLastMileV1](ApproachingLastMileV2.md)
-### [LastMileDispatchingExceptionV1](LastMileDispatchingExceptionV2.md)
-### [LastMileDispatchingQuitV1](LastMileDispatchingQuitV2.md)
-### [LeftPlaceV1](LeftPlaceV2.md)
-### [OccupyingPlaceV1](OccupyingPlaceV2.md)
----
+### [ApproachingLastMileV2](ApproachingLastMileV2.md)
+### [LastMileDispatchingExceptionV2](LastMileDispatchingExceptionV2.md)
+### [LastMileDispatchingQuitV2](LastMileDispatchingQuitV2.md)
+### [LeftPlaceV2](LeftPlaceV2.md)
+### [OccupyingPlaceV2](OccupyingPlaceV2.md)
 
-<br>
-
-# FMS messaging
-### SetPlaceStateV1
-### MoveQueueV1
-### ResetUtilizationV1
-### SetMaxUtilizationV1
-### SetUtilizationV1

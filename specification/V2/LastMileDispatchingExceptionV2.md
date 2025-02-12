@@ -1,4 +1,4 @@
-# LastMileDispatchingExceptionV1
+# LastMileDispatchingExceptionV2
 This message is sent by `AHS` to tells the `LastMileDispatching` that this vehicle hit a snag and can't reach its next position in the service chain, but that the vehicle intends to continue to the final destination after the exception is resolved via external means.  It also means that `AHS` is now expecting the `LastMileDispatching` to send it a new `OccupyPlace` message when the exception is resolved and when the truck can try again.
 > NOTE-1 that the destination in the OccupyPlace message **could** change as a result of fixing the exception.<br>
 > NOTE-2 It is expected that the `AHS` would also send an ISO-23725 VehicleDiagnosticV2 to the FMS at the same time.
@@ -7,7 +7,7 @@ This message is sent by `AHS` to tells the `LastMileDispatching` that this vehic
 
 |Sender| Triggered by | Triggers|
 |---|---|---|
-| `AHS`| truck is stuck but intends to complete spotting | A manual SOP that will correct the truck exception.  Once corrected, a person will tell `Last Mile Dispatching` to re-issue a service chain to the truck using an `OccupyPlaceV1` message. |
+| `AHS`| truck is stuck but intends to complete spotting | A manual SOP that will correct the truck exception.  Once corrected, a person will tell `Last Mile Dispatching` to re-issue a service chain to the truck using an `OccupyPlaceV2` message. |
 
 <br>
 
@@ -39,7 +39,7 @@ While driving to the final spot `"c20f2649-fefe-49b3-a6af-db5f337d1006"`, Truck 
   "Version": 2,
   "Timestamp": "2023-06-27T07:33:51.540Z",
 
-  "LastMileDispatchingExceptionV1":
+  "LastMileDispatchingExceptionV2":
   {
     "VehicleId": "be87fb7e-9eb6-11ed-a8fc-0242ac120002",
     "LastMileId":"23456756-aa34-5742-9b66-08a5d4294f34",

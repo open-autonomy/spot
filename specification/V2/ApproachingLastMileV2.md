@@ -30,7 +30,7 @@ AHS has determined that this autonomous truck is getting close to the entrance o
   "Version": 2,
   "Timestamp": "2023-01-23T09:30:10.435Z",
 
-  "ApproachingLastMileV1":
+  "ApproachingLastMileV2":
   {
     "VehicleId": "52121756-ff73-4257-b59b-6a96708a5d42",
     "LastMileId":"23456756-aa34-5742-9b66-08a5d4294f34",
@@ -51,7 +51,7 @@ The truck was dispatched to an over the edge dump (or paddock) in an open area a
   "Version": 2,
   "Timestamp": "2018-10-31T09:30:10.435Z",
 
-  "ApproachingLastMileV1":
+  "ApproachingLastMileV2":
   {
     "VehicleId": "e4de3723-a315-4506-b4e9-537088a0eabf",
     "LastMileId":"23456756-aa34-5742-9b66-08a5d4294f34",
@@ -64,7 +64,7 @@ The truck was dispatched to an over the edge dump (or paddock) in an open area a
 Example 2, formatted differently
 ```json
 {
-  "ApproachingLastMileV1": {
+  "ApproachingLastMileV2": {
     "VehicleId": "83ae4aab-11bd-43bb-a630-a2baf199a700",
     "LastMileId":"23456756-aa34-5742-9b66-08a5d4294f34",
     "FromWayId": 100048,
@@ -88,7 +88,7 @@ A dispatcher is requested by maintenance to park a specific truck (that has an a
   "Version": 2,
   "Timestamp": "2018-10-31T09:30:10.435Z",
 
-  "ApproachingLastMileV1":
+  "ApproachingLastMileV2":
   {
     "VehicleId": "e4de3723-a315-4506-b4e9-537088a0eabf",
     "LastMileId":"23456756-aa34-5742-9b66-08a5d4294f34",

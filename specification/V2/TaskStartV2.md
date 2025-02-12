@@ -30,7 +30,7 @@ The truck 2248...eec6 spotted at 731854 is told to start the action configured f
   "Version": 2,
   "Timestamp": "2023-01-24T09:30:10.948Z",
 
-  "TaskStartV1":
+  "TaskStartV2":
   {
     "PlaceId": "a7b3c4d5-6e7f-8a9b-0c1d-2e3f4a5b6c7d",
     "VehicleId": "2248d535-3daf-4a86-b1e1-4951a22beec6"

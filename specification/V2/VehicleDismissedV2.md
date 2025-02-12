@@ -1,7 +1,7 @@
 # VehicleDismissedV2
 This message allows the Spot service to inform the vehicle that the last mile assignment has been terminated and that the vehicle should leave the area.
 
-Note that the Vehicle must send a `LeavePlaceV1` message to the Spot service to release the spot or queue point it was occupying.
+Note that the Vehicle must send a `LeavePlaceV2` message to the Spot service to release the spot or queue point it was occupying.
 
 ## Message attributes
 |key |value |format | Description|
