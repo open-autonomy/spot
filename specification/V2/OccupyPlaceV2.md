@@ -44,11 +44,12 @@ Vehicle `2248d535-3daf-4a86-b1e1-4951a22beec6` is granted permission to go throu
   "Protocol":"Open-Autonomy",
   "Version": 2,
   "Timestamp": "2023-01-23T09:30:10.435Z",
+  "CorrelationId": "b82291f2-f97d-45cf-bb5c-601a1dbd2642",
+
   "OccupyPlaceV2":
   {
     "VehicleId": "2248d535-3daf-4a86-b1e1-4951a22beec6",
     "LastMileId": "a82291f2-f97d-45cf-bb5c-601a1dbd2641",
-    "CorrelationId": "b82291f2-f97d-45cf-bb5c-601a1dbd2642",
     "Queues": [
         {
             "PlaceId": "e7b8a9f4-3c4e-4d8b-9b2e-8f9d6c3e7a1f",
@@ -92,11 +93,12 @@ Vehicle `9ac95f3e-9eac-11ed-a8fc-0242ac120002` is granted permission to enter bu
   "Protocol":"Open-Autonomy",
   "Version": 2,
   "Timestamp": "2023-01-23T09:30:10.435Z",
+  "CorrelationId": "e82291f2-f97d-45cf-bb5c-601a1dbd2642",
+
   "OccupyPlaceV2":
   {
     "VehicleId": "9ac95f3e-9eac-11ed-a8fc-0242ac120002",
     "LastMileId": "7a82291f2-f97d-45cf-bb5c-601a1dbd2641",
-    "CorrelationId": "e82291f2-f97d-45cf-bb5c-601a1dbd2642",
     "Queues": [
         {
             "PlaceId": "e7b8a9f4-3c4e-4d8b-9b2e-8f9d6c3e7a1f",
@@ -125,11 +127,12 @@ Vehicle `9ac95f3e-9eac-11ed-a8fc-0242ac120002` is granted permission to go to th
   "Protocol":"Open-Autonomy",
   "Version": 2,
   "Timestamp": "2023-01-23T09:30:10.435Z",
+  "CorrelationId": "4b82291f2-f97d-45cf-bb5c-601a1dbd2642",
+  
   "OccupyPlaceV2":
   {
     "VehicleId": "9ac95f3e-9eac-11ed-a8fc-0242ac120002",
     "LastMileId": "3a82291f2-f97d-45cf-bb5c-601a1dbd2641",
-    "CorrelationId": "4b82291f2-f97d-45cf-bb5c-601a1dbd2642",
     "Queues": [],
     "Spot": {
         "PlaceId": "9ac95f3e-9eac-11ed-a8fc-0242ac120002",

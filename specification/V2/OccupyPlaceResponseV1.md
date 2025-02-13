@@ -5,6 +5,8 @@ All OccupyPlaceV2 messages should be responded to with an OccupyPlaceResponseV1 
 |---|---|---|
 |`AHS` | `OccupyPlaceV2` message| Last mile assignment has been received. |
 
+**Note**: the top-level message should contain a `CorrelationId` that matches the `CorrelationId` found in the message containing the OccupyPlaceV2 message that triggered this response.
+
 <br>
 
 ## Message attributes
@@ -13,7 +15,6 @@ All OccupyPlaceV2 messages should be responded to with an OccupyPlaceResponseV1 
 |---|:---:|:---:|---|
 |`"VehicleId"`| VehicleId | UUID| The vehicle that is occupying the place|
 |`"LastMileId"`| DispatchingId | UUID| A unique ID for this dispatching that will remain the same throught the process of dispatching the truck to the spot and until the truck is released from the Last Mile dispatching process.|
-|`"CorrelationId"`| CorrelationId | UUID| A unique ID found in the associated OccupyPlaceV2 message that triggered this response.|
 |`"Status"`| oneOf: [`"Accept"`, `"Reject"`] | enum | Indicates the acceptance or rejection of the request.|
 |`"Detail"`|`nullable` string | string | A human readable description of the reason for the rejection.|
 
@@ -26,12 +27,12 @@ The following message indicates an accept response to an OccupyPlaceV2 message:
   "Protocol":"Open-Autonomy",
   "Version": 2,
   "Timestamp": "2023-01-24T09:30:10.948Z",
+  "CorrelationId": "a82291f2-f97d-45cf-bb5c-601a1dbd2641",
 
   "OccupyPlaceResponseV1":
   {
     "VehicleId": "be87fb7e-9eb6-11ed-a8fc-0242ac120002",
     "LastMileId": "a82291f2-f97d-45cf-bb5c-601a1dbd2641",
-    "CorrelationId": "a82291f2-f97d-45cf-bb5c-601a1dbd2641",
     "Status": "Accepted"
   }
 }
@@ -44,12 +45,12 @@ The following message provides an example of a rejection response to an OccupyPl
   "Protocol":"Open-Autonomy",
   "Version": 2,
   "Timestamp": "2023-01-24T09:30:10.948Z",
+  "CorrelationId": "a82291f2-f97d-45cf-bb5c-601a1dbd2641",
 
   "OccupyPlaceResponseV1":
   {
     "VehicleId": "be87fb7e-9eb6-11ed-a8fc-0242ac120002",
     "LastMileId": "a82291f2-f97d-45cf-bb5c-601a1dbd2641",
-    "CorrelationId": "a82291f2-f97d-45cf-bb5c-601a1dbd2641",
     "Status": "Rejected",
     "Detail": "The vehicle cannot re-spot while tipping."
   }

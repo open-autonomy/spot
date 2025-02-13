@@ -29,7 +29,8 @@ The truck `2248d535-3daf-4a86-b1e1-4951a22beec6` spotted at `4f4e2b7e-9eb6-11ed-
   "Protocol":"Open-Autonomy",
   "Version": 2,
   "Timestamp": "2023-01-24T09:34:26.18Z",
-
+  "CorrelationId": "a82291f2-f97d-45cf-bb5c-601a1dbd2641",
+  
   "LeavePlaceV2":
   {
     "PlaceId": "4f4e2b7e-9eb6-11ed-a8fc-0242ac120002",

@@ -6,6 +6,8 @@ This message must be sent by the AHS in response to a TaskStart2 message.  This 
 |---|---|---|
 |`AHS` | `TaskStartV2` message| Task assignment has been received. |
 
+**Note**: the top-level message should contain a `CorrelationId` that matches the `CorrelationId` found in the message containing the TaskStartV2 message that triggered this response.
+
 ## Message attributes
 
 |key |value |format | Description|
@@ -25,12 +27,12 @@ The following message indicates an accept response to a TaskStartV2 message:
   "Protocol":"Open-Autonomy",
   "Version": 2,
   "Timestamp": "2023-01-24T09:30:10.948Z",
+  "CorrelationId": "a82291f2-f97d-45cf-bb5c-601a1dbd2641",
 
   "TaskStartResponseV1":
   {
     "VehicleId": "be87fb7e-9eb6-11ed-a8fc-0242ac120002",
     "TaskId": "a82291f2-f97d-45cf-bb5c-601a1dbd2641",
-    "CorrelationId": "a82291f2-f97d-45cf-bb5c-601a1dbd2641",
     "Status": "Accepted"
   }
 }
@@ -43,12 +45,12 @@ The following message provides an example of a rejection response to a TaskStart
   "Protocol":"Open-Autonomy",
   "Version": 2,
   "Timestamp": "2023-01-24T09:30:10.948Z",
+  "CorrelationId": "a82291f2-f97d-45cf-bb5c-601a1dbd2641",
 
   "TaskStartResponseV1":
   {
     "VehicleId": "be87fb7e-9eb6-11ed-a8fc-0242ac120002",
     "TaskId": "a82291f2-f97d-45cf-bb5c-601a1dbd2641",
-    "CorrelationId": "a82291f2-f97d-45cf-bb5c-601a1dbd2641",
     "Status": "Rejected",
     "Detail": "The vehicle is not at the spot point."
   }

@@ -21,12 +21,12 @@ The following message indicates an accept response to a VehicleDismissedV2 messa
   "Protocol":"Open-Autonomy",
   "Version": 2,
   "Timestamp": "2023-01-24T09:30:10.948Z",
+  "CorrelationId": "a82291f2-f97d-45cf-bb5c-601a1dbd2641",
 
   "VehicleDismissedResponseV1":
   {
     "VehicleId": "be87fb7e-9eb6-11ed-a8fc-0242ac120002",
     "LastMileId": "a82291f2-f97d-45cf-bb5c-601a1dbd2641",
-    "CorrelationId": "a82291f2-f97d-45cf-bb5c-601a1dbd2641",
     "Status": "Accepted"
   }
 }
@@ -39,12 +39,12 @@ The following message provides an example of a rejection response to a VehicleDi
   "Protocol":"Open-Autonomy",
   "Version": 2,
   "Timestamp": "2023-01-24T09:30:10.948Z",
+  "CorrelationId": "a82291f2-f97d-45cf-bb5c-601a1dbd2641",
 
   "VehicleDismissedResponseV1":
   {
     "VehicleId": "be87fb7e-9eb6-11ed-a8fc-0242ac120002",
     "LastMileId": "a82291f2-f97d-45cf-bb5c-601a1dbd2641",
-    "CorrelationId": "a82291f2-f97d-45cf-bb5c-601a1dbd2641",
     "Status": "Rejected",
     "Detail": "Unknown last mile assignment."
   }

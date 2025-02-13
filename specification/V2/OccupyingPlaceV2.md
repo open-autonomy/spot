@@ -10,6 +10,7 @@ The way the electronic driver tells the spot service it has reached a `Place`.  
 |---|---|---|
 | `AHS`| Truck has reached the Place | `OccupyPlaceV2`  |
 
+
 <br><br>
 
 ## Message attributes

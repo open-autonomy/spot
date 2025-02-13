@@ -9,6 +9,8 @@ For agreed upon tasks *(e.g. crusher dumping)*, the truck will spot and wait to 
 |---|---|---|
 | `Spot` | Truck `OccupyingPlace` at Spot and truck environment is ready. | Truck to start executing `Action` for the spot |
 
+Note that the top-level message should contain a `CorrelationId` that matches the `CorrelationId` found in the message containing the LeavePlaceV2 message that triggered this response.
+
 <br>
 
 ## Message attributes
