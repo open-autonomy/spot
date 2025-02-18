@@ -1,6 +1,6 @@
 # Spot Protocol Version 2
 
-This document describes Version 2 of the Spot Specification. Support for Version 2 is indicated by the `ProtocolVersion` field in the message header.
+This document describes Version 2 of the Spot Specification. Support for Version 2 is indicated by the `Protocol` and `Version` field in the [message header](MessageHeaders.md).
 
 # Changeset
 The following table describes the changeset between Version 2 and Version 1 of the Spot standard:
@@ -11,6 +11,8 @@ The following table describes the changeset between Version 2 and Version 1 of t
 | the FromWayId field in ApproachingLastMile has changed from required to optional to account for trucks requesting a last mile assignment while inside the destination area. |
 | A new OccupyPlaceV2 message has been created in order to simplify communications with the AHT and remove the need for cache management. |
 | Removed Cache Management as this information is now fully enclosed in the OccupyPlaceV2 message. |
+| Removed all `VehicleId` attribute from messages, and to use top-level message headers `EquipmentId` |
+| Added `CorrelationId` in top-level message headers to link relevant messages |
  
 
 
@@ -48,6 +50,7 @@ Find below the Specification for the Version 2 protocol for the spot service of 
 
 # Spot Service
 ### [ServiceIdentification](ServiceIdentification.md)
+### [MessageHeaders](MessageHeaders.md)
 # Last Mile Dispatching
 ### [OccupyPlaceV2](OccupyPlaceV2.md)
 ### [OccupyPlaceResponseV1](OccupyPlaceResponseV1.md)

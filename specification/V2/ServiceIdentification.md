@@ -23,7 +23,7 @@ The first message sent by the `spot` service.  It identifies that the client is 
 This message is used when a client connects to the spot service.
 ## Example
 This example would be for a future version that would support multiple scopes.
-```json
+```JSON
 {
   "Protocol":"Open-Autonomy",
   "Version": 2,

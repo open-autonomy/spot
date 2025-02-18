@@ -9,10 +9,11 @@ When the truck quits it is the responsibility of the truck to release the queue 
 
 <br>
 
+**Note**: the top-level message should contain the `EquipmentId` which is the EquipmentId of the vehicle that has just requested to quit being managed by the last mile dispatching process.
+
 ## Message attributes
 |key |value |format | Description|
 |---|:---:|:---:|---|
-|`"VehicleId"`| VehicleId | UUID| The vehicle that has just requested to quit being managed by the last mile dispatching process|
 |`"LastMileId"`| DispatchingId | UUID| A unique ID for this dispatching that will remain the same throught the process of dispatching the truck to the spot and until the truck is released from the Last Mile dispatching process.|
 
 
@@ -22,15 +23,14 @@ This message is used by `AHS` to get a truck out of the last mile dispatching pr
 ## Example
 While waiting in a queue to be loaded by a shovel, Truck `be87fb7e-9eb6-11ed-a8fc-0242ac120002` was re-dispatched to a new destination because the shovel just went down due to a mechanical failure.
 
-```json
+```JSON
 {
   "Protocol":"Open-Autonomy",
   "Version": 2,
   "Timestamp": "2023-01-24T09:30:10.948Z",
-
+  "EquipmentId": "be87fb7e-9eb6-11ed-a8fc-0242ac120002",
   "LastMileDispatchingQuitV2":
   {
-    "VehicleId": "be87fb7e-9eb6-11ed-a8fc-0242ac120002",
     "LastMileId":"23456756-aa34-5742-9b66-08a5d4294f34"
   }
 

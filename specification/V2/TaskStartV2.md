@@ -9,33 +9,32 @@ For agreed upon tasks *(e.g. crusher dumping)*, the truck will spot and wait to 
 |---|---|---|
 | `Spot` | Truck `OccupyingPlace` at Spot and truck environment is ready. | Truck to start executing `Action` for the spot |
 
-Note that the top-level message should contain a `CorrelationId` that matches the `CorrelationId` found in the message containing the LeavePlaceV2 message that triggered this response.
+
+**Note**: the top-level message should contain the `EquipmentId` which is the EquipmentId of the vehicle that is spotted there.
+
+**Note**: the top-level message should contain a `CorrelationId` that which will be used in the TaskStartResponseV1 message to correlate to this message.
 
 <br>
 
 ## Message attributes
 |key |value |format | Description|
 |---|:---:|:---:|---|
-|`"PlaceId"`| WayId| UUID | The spot where the truck has spotted and is waiting for the go ahead.|
-|`"VehicleId"`| VehicleId| UUID| The vehicle spotted there.|
-
-
+|`"PlaceId"`| WayId | UUID | The spot where the truck has spotted and is waiting for the go ahead. |
 
 ## Use Case:
 This message will typically be used for crusher dumping to ensure the trucks don't start dumping immediately because the crusher could be too full at times or the rock breaker might be engaged.
 
 ## Example
 The truck 2248...eec6 spotted at 731854 is told to start the action configured for that Spot.
-```json
+```JSON
 {
   "Protocol":"Open-Autonomy",
   "Version": 2,
   "Timestamp": "2023-01-24T09:30:10.948Z",
-
+  "EquipmentId": "2248d535-3daf-4a86-b1e1-4951a22beec6",
   "TaskStartV2":
   {
     "PlaceId": "a7b3c4d5-6e7f-8a9b-0c1d-2e3f4a5b6c7d",
-    "VehicleId": "2248d535-3daf-4a86-b1e1-4951a22beec6"
   }
 }
 ```

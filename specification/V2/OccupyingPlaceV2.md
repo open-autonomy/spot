@@ -13,12 +13,13 @@ The way the electronic driver tells the spot service it has reached a `Place`.  
 
 <br><br>
 
+**Note**: the top-level message should contain the `EquipmentId` which is the EquipmentId of the vehicle that is occupying the place.
+
 ## Message attributes
 |key |value |format | Description|
 |---|:---:|:---:|---|
-|`"VehicleId"`| VehicleId | UUID| The vehicle that is occupying the place|
-|`"LastMileId"`| DispatchingId | UUID| A unique ID for this dispatching that will remain the same throught the process of dispatching the truck to the spot and until the truck is released from the Last Mile dispatching process.|
-|`"PlaceId"`| PlaceId | UUID | The identity of the place the truck is occupying |
+|`"LastMileId"`| DispatchingId | UUID| A unique ID for this dispatching that will remain the same throught the process of dispatching the truck to the spot and until the truck is released from the Last Mile dispatching process. |
+|`"PlaceId"`| PlaceId | UUID | The identity of the place the truck is occupying. |
 
 
 
@@ -27,15 +28,14 @@ This message is used by the Spot service to track where the trucks are on the se
 
 ## Example
 This example would be for a future version that would support multiple scopes.
-```json
+```JSON
 {
   "Protocol":"Open-Autonomy",
   "Version": 2,
   "Timestamp": "2023-01-24T09:30:10.948Z",
-
+  "EquipmentId": "be87fb7e-9eb6-11ed-a8fc-0242ac120002",
   "OccupyingPlaceV2":
   {
-    "VehicleId": "be87fb7e-9eb6-11ed-a8fc-0242ac120002",
     "LastMileId": "a82291f2-f97d-45cf-bb5c-601a1dbd2641",
     "PlaceId": "6f4e2b7e-9eb6-11ed-a8fc-0242ac120002"
   }

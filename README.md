@@ -29,7 +29,7 @@ The spot specification is currently in [version 2](./specification/V2/README.md)
 
 The AHS must indicate which version of the protocol it supports by sending the following message. For instance, if the AHS supports version 2 of the protocol, it will send the following message:
 
-```json
+```JSON
 {
   "Protocol":"Open-Autonomy",
   "Version": 2,
