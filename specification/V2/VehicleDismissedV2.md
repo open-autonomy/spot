@@ -3,11 +3,6 @@ This message allows the Spot service to inform the vehicle that the last mile as
 
 Note that the Vehicle must send a `LeavePlaceV2` message to the Spot service to release the spot or queue point it was occupying.
 
-## Message headers
-| key | value | format | description |
-| --- |:---:|:---:| --- |
-| `"EquipmentId"` | EquipmentId | UUID | Identification of the vehicle that is receiving the dispatching instructions. |
-
 **Note**: the top-level message should contain the `EquipmentId` which is the EquipmentId of the vehicle that is receiving the dispatching instructions.
 
 **Note**: the top-level message should contain a `CorrelationId` which will be used in the OccupyPlaceResponseV1 message to correlate to this message.
