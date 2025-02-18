@@ -19,14 +19,14 @@ For agreed upon tasks *(e.g. crusher dumping)*, the truck will spot and wait to 
 ## Message attributes
 |key |value |format | Description|
 |---|:---:|:---:|---|
-|`"LastMileId"`| DispatchingId | UUID | A unique ID for this dispatching that will remain the same throught the process of last mile dispatching the truck to the spot and until the truck is released from the Last Mile dispatching process. |
+|``"LastMileId"``| DispatchingId| UUID| A unique ID for this dispatching that will remain the same throught the process of dispatching the truck to the spot and until the truck is released from the Last Mile dispatching process. |
 |`"PlaceId"`| WayId | UUID | The spot where the truck has spotted and is waiting for the go ahead. |
 
 ## Use Case:
 This message will typically be used for crusher dumping to ensure the trucks don't start dumping immediately because the crusher could be too full at times or the rock breaker might be engaged.
 
 ## Example
-The truck 2248...eec6 spotted at 731854 is told to start the action configured for that Spot.
+The truck 2248...eec6 spotted at a7b3c4d5...2e3f4a5b6c7d is told to start the action configured for that Spot.
 ```JSON
 {
   "Protocol":"Open-Autonomy",
@@ -36,8 +36,8 @@ The truck 2248...eec6 spotted at 731854 is told to start the action configured f
   "EquipmentId": "2248d535-3daf-4a86-b1e1-4951a22beec6",
   "TaskStartV2":
   {
-    "LastMileId": "a82291f2-f97d-45cf-bb5c-601a1dbd2641",
-    "PlaceId": "a7b3c4d5-6e7f-8a9b-0c1d-2e3f4a5b6c7d",
+    "LastMileId": "f1b9b3b4-0b3b-4b3b-8b3b-0b3b3b3b3b3b",
+    "PlaceId": "a7b3c4d5-6e7f-8a9b-0c1d-2e3f4a5b6c7d"
   }
 }
 ```

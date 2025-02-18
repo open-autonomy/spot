@@ -1,6 +1,6 @@
 # TaskStartResponseV1
 
-This message must be sent by the AHS in response to a TaskStart2 message.  This message is used to acknowledge the receipt of the TaskStartV2 message and to inform the sender of the acceptance or rejection of the request.  The response message should contain the same `EquipmentId`, `TaskId`, and `CorrelationId` as the request message.  The response message should also contain a `Status` field that indicates whether the request was accepted or rejected.  If the request was rejected, the response message should also contain a `Detail` field that provides a human readable description of the reason for the rejection.
+This message must be sent by the AHS in response to a TaskStart2 message.  This message is used to acknowledge the receipt of the TaskStartV2 message and to inform the sender of the acceptance or rejection of the request.  The response message should contain the same `EquipmentId`, `LastMileId`, and `CorrelationId` as the request message.  The response message should also contain a `Status` field that indicates whether the request was accepted or rejected.  If the request was rejected, the response message should also contain a `Detail` field that provides a human readable description of the reason for the rejection.
 
 |Sender| Triggered by | Triggers|
 |---|---|---|
@@ -15,7 +15,7 @@ This message must be sent by the AHS in response to a TaskStart2 message.  This 
 |key |value |format | Description|
 |---|:---:|:---:|---|
 |`"LastMileId"`| DispatchingId | UUID | A unique ID for this dispatching that will remain the same throught the process of last mile dispatching the truck to the spot and until the truck is released from the Last Mile dispatching process. |
-|`"Response"`| oneOf: [`"Accept"`, `"Reject"`] | enum | Indicates the acceptance or rejection of the request. |
+|`"Response"`| oneOf: [`"Accepted"`, `"Rejected"`] | enum | Indicates the acceptance or rejection of the request. |
 |`"Detail"`| string | string <br/> `nullable` | A human readable description of the reason for the rejection. |
 
 ## Example
