@@ -16,7 +16,7 @@ All OccupyPlaceV2 messages should be responded to with an OccupyPlaceResponseV1 
 |key |value |format | Description|
 |---|:---:|:---:|---|
 |`"LastMileId"`| DispatchingId | UUID| A unique ID for this dispatching that will remain the same throught the process of dispatching the truck to the spot and until the truck is released from the Last Mile dispatching process. |
-|`"Status"`| oneOf: [`"Accept"`, `"Reject"`] | enum | Indicates the acceptance or rejection of the request. |
+|`"Status"`| oneOf: [`"Accepted"`, `"Rejected"`] | enum | Indicates the acceptance or rejection of the request. |
 |`"Detail"`| string | string <br/> `nullable` | A human readable description of the reason for the rejection. |
 
 ## Example
