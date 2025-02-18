@@ -35,7 +35,8 @@ The truck 2248...eec6 spotted at 731854 is told to start the action configured f
   "EquipmentId": "2248d535-3daf-4a86-b1e1-4951a22beec6",
   "TaskStartV2":
   {
-    "PlaceId": "a7b3c4d5-6e7f-8a9b-0c1d-2e3f4a5b6c7d",
+    "LastMileId": "f1b9b3b4-0b3b-4b3b-8b3b-0b3b3b3b3b3b",
+    "PlaceId": "a7b3c4d5-6e7f-8a9b-0c1d-2e3f4a5b6c7d"
   }
 }
 ```
