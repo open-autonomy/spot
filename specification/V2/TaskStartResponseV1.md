@@ -14,8 +14,8 @@ This message must be sent by the AHS in response to a TaskStart2 message.  This 
 
 |key |value |format | Description|
 |---|:---:|:---:|---|
-|`"TaskId"`| TaskId | UUID | A unique ID for this task that will remain the same throught the process of dispatching the truck to the spot and until the truck is released from the task assignment process. |
-|`"Status"`| oneOf: [`"Accept"`, `"Reject"`] | enum | Indicates the acceptance or rejection of the request. |
+|`"LastMileId"`| DispatchingId | UUID | A unique ID for this dispatching that will remain the same throught the process of last mile dispatching the truck to the spot and until the truck is released from the Last Mile dispatching process. |
+|`"Response"`| oneOf: [`"Accept"`, `"Reject"`] | enum | Indicates the acceptance or rejection of the request. |
 |`"Detail"`| string | string <br/> `nullable` | A human readable description of the reason for the rejection. |
 
 ## Example
@@ -31,8 +31,8 @@ The following message indicates an accept response to a TaskStartV2 message:
   "EquipmentId": "be87fb7e-9eb6-11ed-a8fc-0242ac120002",
   "TaskStartResponseV1":
   {
-    "TaskId": "a82291f2-f97d-45cf-bb5c-601a1dbd2641",
-    "Status": "Accepted"
+    "LastMileId": "a82291f2-f97d-45cf-bb5c-601a1dbd2641",
+    "Response": "Accepted"
   }
 }
 ```
@@ -48,8 +48,8 @@ The following message provides an example of a rejection response to a TaskStart
   "EquipmentId": "be87fb7e-9eb6-11ed-a8fc-0242ac120002",
   "TaskStartResponseV1":
   {
-    "TaskId": "a82291f2-f97d-45cf-bb5c-601a1dbd2641",
-    "Status": "Rejected",
+    "LastMileId": "a82291f2-f97d-45cf-bb5c-601a1dbd2641",
+    "Response": "Rejected",
     "Detail": "The vehicle is not at the spot point."
   }
 }
