@@ -19,6 +19,7 @@ For agreed upon tasks *(e.g. crusher dumping)*, the truck will spot and wait to 
 ## Message attributes
 |key |value |format | Description|
 |---|:---:|:---:|---|
+|``"LastMileId"``| DispatchingId| UUID| A unique ID for this dispatching that will remain the same throught the process of dispatching the truck to the spot and until the truck is released from the Last Mile dispatching process. |
 |`"PlaceId"`| WayId | UUID | The spot where the truck has spotted and is waiting for the go ahead. |
 
 ## Use Case:
