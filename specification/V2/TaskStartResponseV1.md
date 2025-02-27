@@ -1,10 +1,10 @@
 # TaskStartResponseV1
 
-This message must be sent by the AHS in response to a TaskStart2 message.  This message is used to acknowledge the receipt of the TaskStartV2 message and to inform the sender of the acceptance or rejection of the request.  The response message should contain the same `EquipmentId`, `LastMileId`, and `RequestId` as the request message.  The response message should also contain a `Status` field that indicates whether the request was accepted or rejected.  If the request was rejected, the response message should also contain a `Detail` field that provides a human readable description of the reason for the rejection.
+This message must be sent by the AHS in response to a TaskStart2 message.  This message is used to acknowledge the receipt of the TaskStartRequestV1 message and to inform the sender of the acceptance or rejection of the request.  The response message should contain the same `EquipmentId`, `LastMileId`, and `RequestId` as the request message.  The response message should also contain a `Status` field that indicates whether the request was accepted or rejected.  If the request was rejected, the response message should also contain a `Detail` field that provides a human readable description of the reason for the rejection.
 
 |Sender| Triggered by | Triggers|
 |---|---|---|
-|`AHS` | `TaskStartV2` message| Task assignment has been received. |
+|`AHS` | `TaskStartRequestV1` message| Task assignment has been received. |
 
 **Note**: the top-level message should contain the `EquipmentId` which is the EquipmentId of the vehicle that is receiving the task assignment.
 
@@ -19,7 +19,7 @@ This message must be sent by the AHS in response to a TaskStart2 message.  This 
 
 ## Example
 
-The following message indicates an accept response to a TaskStartV2 message:
+The following message indicates an accept response to a TaskStartRequestV1 message:
 
 ```JSON
 {
@@ -36,7 +36,7 @@ The following message indicates an accept response to a TaskStartV2 message:
 }
 ```
 
-The following message provides an example of a rejection response to a TaskStartV2 message:
+The following message provides an example of a rejection response to a TaskStartRequestV1 message:
 
 ```JSON
 {

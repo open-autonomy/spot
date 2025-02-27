@@ -1,4 +1,4 @@
-# OccupyPlaceV2
+# OccupyPlaceRequestV1
 
 The Occupy place message is a mini-dispatching instruction set on how to reach a spot while in an open area.  Historically, open areas were not managed by fleet management systems for manned systems, so there is no equivalent in a manned operation.
 
@@ -13,9 +13,9 @@ The Occupy place message is a mini-dispatching instruction set on how to reach a
 
 This message gives explicit permissions, to a truck identified by the EquipmentID, to use the listed place(s). The message will including all the places the truck currently possesses (not just added permissions).   The truck will have to Release each Place once it leaves that resource via the [`LeftPlace2`](LeftPlaceV2.md) message.  Even if the truck does not stop at the resource, the truck must release the place once it passes that LLE position so it’s released for other trucks to use.
 
-A place permission value of `0` will be set to mean that the vehicle does NOT have permission for a place type.  Multiple `OccupyPlace` messages can be sent to the same truck during the last mile dispatching.  Each new message from the spot service overwrites the previous permissions.  A truck that has had its permission revoked while it was moving to THAT place that just got revoked must stop (in a controlled normal manner) and wait for a new `OccupyPlace` messages.
+A place permission value of `0` will be set to mean that the vehicle does NOT have permission for a place type.  Multiple `OccupyPlaceRequest` messages can be sent to the same truck during the last mile dispatching.  Each new message from the spot service overwrites the previous permissions.  A truck that has had its permission revoked while it was moving to THAT place that just got revoked must stop (in a controlled normal manner) and wait for a new `OccupyPlaceRequest` messages.
 
-> IMPORTANT NOTE: Previously granted resources can be removed or changed in a later OccupyPlace message.  
+> IMPORTANT NOTE: Previously granted resources can be removed or changed in a later OccupyPlaceRequest message.  
 
 
 The message envelop will also contain a copy of all objects representing the resources the vehicle is given permission to.  Not only is this convenient for the client software, it is primiraly there to prevent race conditions or the usage of stale cached objects on the client side.
@@ -45,7 +45,7 @@ Vehicle `2248d535-3daf-4a86-b1e1-4951a22beec6` is granted permission to go throu
   "Version": 2,
   "Timestamp": "2023-01-23T09:30:10.435Z",
   "EquipmentId": "2248d535-3daf-4a86-b1e1-4951a22beec6",
-  "OccupyPlaceV2":
+  "OccupyPlaceRequestV1":
   {
     "LastMileId": "a82291f2-f97d-45cf-bb5c-601a1dbd2641",
     "RequestId": "a82291f2-f97d-45cf-bb5c-601a1dbd2641",
@@ -93,7 +93,7 @@ Vehicle `9ac95f3e-9eac-11ed-a8fc-0242ac120002` is granted permission to enter bu
   "Version": 2,
   "Timestamp": "2023-01-23T09:30:10.435Z",
   "EquipmentId": "9ac95f3e-9eac-11ed-a8fc-0242ac120002",
-  "OccupyPlaceV2":
+  "OccupyPlaceRequestV1":
   {
     "LastMileId": "7a82291f2-f97d-45cf-bb5c-601a1dbd2641",
     "RequestId": "e82291f2-f97d-45cf-bb5c-601a1dbd2642",
@@ -126,7 +126,7 @@ Vehicle `9ac95f3e-9eac-11ed-a8fc-0242ac120002` is granted permission to go to th
   "Version": 2,
   "Timestamp": "2023-01-23T09:30:10.435Z",
   "Equipment": "9ac95f3e-9eac-11ed-a8fc-0242ac120002",
-  "OccupyPlaceV2":
+  "OccupyPlaceRequestV1":
   {
     "LastMileId": "3a82291f2-f97d-45cf-bb5c-601a1dbd2641",
     "RequestId": "e82291f2-f97d-45cf-bb5c-601a1dbd2642",

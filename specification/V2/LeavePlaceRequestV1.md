@@ -1,4 +1,4 @@
-# LeavePlaceV2
+# LeavePlaceRequestV1
 This message represents what is called a **truck kickout** in the industry.  This is the signal from a shovel operator to the truck operator that it's fully loaded and it can leave.  
 > NOTE: In a manned operation, the kickout signal is typically one short blast of the horn of the shovel.
 
@@ -32,7 +32,7 @@ The truck `2248d535-3daf-4a86-b1e1-4951a22beec6` spotted at `4f4e2b7e-9eb6-11ed-
   "Version": 2,
   "Timestamp": "2023-01-24T09:34:26.18Z",
   "EquipmentId": "2248d535-3daf-4a86-b1e1-4951a22beec6",
-  "LeavePlaceV2":
+  "LeavePlaceRequestV1":
   {
     "RequestId" : "a82291f2-f97d-45cf-bb5c-601a1dbd2641",
     "PlaceId": "4f4e2b7e-9eb6-11ed-a8fc-0242ac120002",

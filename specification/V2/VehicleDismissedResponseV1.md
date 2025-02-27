@@ -1,6 +1,6 @@
 # VehicleDismissedResponseV1
 
-VehicleDismissedResponseV1 is the response object for the VehicleDismissedV2 message.  This message is used to acknowledge the receipt of the VehicleDismissedV2 message and to inform the sender of the acceptance or rejection of the request.  The response message should contain the same `EquipmentId`, `LastMileId`, and `RequestId` as the request message. The response message should also contain a `Response` field that indicates whether the request was accepted or rejected.  If the request was rejected, the response message should also contain a `Detail` field that provides a human readable description of the reason for the rejection.
+VehicleDismissedResponseV1 is the response object for the VehicleDismissedRequestV1 message.  This message is used to acknowledge the receipt of the VehicleDismissedRequestV1 message and to inform the sender of the acceptance or rejection of the request.  The response message should contain the same `EquipmentId`, `LastMileId`, and `RequestId` as the request message. The response message should also contain a `Response` field that indicates whether the request was accepted or rejected.  If the request was rejected, the response message should also contain a `Detail` field that provides a human readable description of the reason for the rejection.
 
 **Note**: the top-level message should contain the `EquipmentId` which is the EquipmentId of the vehicle that is receiving the dispatching instructions.
 
@@ -15,7 +15,7 @@ VehicleDismissedResponseV1 is the response object for the VehicleDismissedV2 mes
 
 ## Example
 
-The following message indicates an accept response to a VehicleDismissedV2 message:
+The following message indicates an accept response to a VehicleDismissedRequestV1 message:
 
 ```JSON
 {
@@ -32,7 +32,7 @@ The following message indicates an accept response to a VehicleDismissedV2 messa
 }
 ```
 
-The following message provides an example of a rejection response to a VehicleDismissedV2 message:
+The following message provides an example of a rejection response to a VehicleDismissedRequestV1 message:
 
 ```JSON
 {

@@ -7,7 +7,7 @@ This message is sent by `AHS` to tells the `LastMileDispatching` that this vehic
 
 |Sender| Triggered by | Triggers|
 |---|---|---|
-| `AHS`| truck is stuck but intends to complete spotting | A manual SOP that will correct the truck exception.  Once corrected, a person will tell `Last Mile Dispatching` to re-issue a service chain to the truck using an `OccupyPlaceV2` message. |
+| `AHS`| truck is stuck but intends to complete spotting | A manual SOP that will correct the truck exception.  Once corrected, a person will tell `Last Mile Dispatching` to re-issue a service chain to the truck using an `OccupyPlaceRequestV1` message. |
 
 <br>
 
@@ -58,7 +58,7 @@ A remote operator in the ROC received the alarm from the truck through the AHS U
   "Version": 2,
   "Timestamp": "2023-01-23T09:30:10.435Z",
   "EquipmentId": "be87fb7e-9eb6-11ed-a8fc-0242ac120002",
-  "OccupyPlaceV2":
+  "OccupyPlaceRequestV1":
   {
     "LastMileId":"23456756-aa34-5742-9b66-08a5d4294f34",
     "RequestId": "b82291f2-f97d-45cf-bb5c-601a1dbd2642",

@@ -1,9 +1,9 @@
 # LeavePlaceResponseV1
-All LeavePlaceV2 messages sent from the Spot Service to the AHS should be responded to with a LeavePlaceResponseV1 message.  This message is used to acknowledge the receipt of the LeavePlaceV2 message and to inform the sender of the acceptance or rejection of the request.  The response message should contain the same `EquipmentId`, `RequestId`, `LastMileId`. The response message should also contain a `Response` field that indicates whether the request was accepted or rejected.  If the request was rejected, the response message should also contain a `Detail` field that provides a human readable description of the reason for the rejection.
+All LeavePlaceRequestV1 messages sent from the Spot Service to the AHS should be responded to with a LeavePlaceResponseV1 message.  This message is used to acknowledge the receipt of the LeavePlaceRequestV1 message and to inform the sender of the acceptance or rejection of the request.  The response message should contain the same `EquipmentId`, `RequestId`, `LastMileId`. The response message should also contain a `Response` field that indicates whether the request was accepted or rejected.  If the request was rejected, the response message should also contain a `Detail` field that provides a human readable description of the reason for the rejection.
 
 |Sender| Triggered by | Triggers|
 |---|---|---|
-|`AHS` | `LeavePlaceV2` message| Leave Place message was received. |
+|`AHS` | `LeavePlaceRequestV1` message| Leave Place message was received. |
 
 **Note**: the top-level message should contain the `EquipmentId` which is the EquipmentId of the vehicle that has just left the place.
 
@@ -18,7 +18,7 @@ All LeavePlaceV2 messages sent from the Spot Service to the AHS should be respon
 
 ## Example
 
-The following message indicates an accept response to a LeavePlaceV2 message:
+The following message indicates an accept response to a LeavePlaceRequestV1 message:
 
 ```JSON
 {
@@ -35,7 +35,7 @@ The following message indicates an accept response to a LeavePlaceV2 message:
 }
 ```
 
-The following message provides an example of a rejection response to a LeavePlaceV2 message:
+The following message provides an example of a rejection response to a LeavePlaceRequestV1 message:
 
 ```JSON
 {

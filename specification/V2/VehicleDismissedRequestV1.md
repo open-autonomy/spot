@@ -1,7 +1,7 @@
-# VehicleDismissedV2
+# VehicleDismissedRequestV1
 This message allows the Spot service to inform the vehicle that the last mile assignment has been terminated and that the vehicle should leave the area.
 
-Note that the Vehicle must send a `LeavePlaceV2` message to the Spot service to release the spot or queue point it was occupying.
+Note that the Vehicle must send a `LeavePlaceRequestV1` message to the Spot service to release the spot or queue point it was occupying.
 
 **Note**: the top-level message should contain the `EquipmentId` which is the EquipmentId of the vehicle that is receiving the dispatching instructions.
 
@@ -21,7 +21,7 @@ The following message indicates that the last mile assignment assigned to vehicl
   "Version": 2,
   "Timestamp": "2023-01-24T09:30:10.948Z",
   "EquipmentId": "be87fb7e-9eb6-11ed-a8fc-0242ac120002",
-  "VehicleDismissedV2":
+  "VehicleDismissedRequestV1":
   {
     "LastMileId": "a82291f2-f97d-45cf-bb5c-601a1dbd2641",
     "RequestId": "a82291f2-f97d-45cf-bb5c-601a1dbd2641"

@@ -8,7 +8,7 @@ The way the electronic driver tells the spot service it has reached a `Place`.  
 
 |Sender| Triggered by | May Trigger |
 |---|---|---|
-| `AHS`| Truck has reached the Place | `OccupyPlaceV2`  |
+| `AHS`| Truck has reached the Place | `OccupyPlaceRequestV1`  |
 
 
 <br><br>

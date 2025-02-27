@@ -9,8 +9,8 @@ The following table describes the changeset between Version 2 and Version 1 of t
 |---|---|
 | The placeId field for all messages has changed from `uint_64` to `uuid`. |
 | the FromWayId field in ApproachingLastMile has changed from required to optional to account for trucks requesting a last mile assignment while inside the destination area. |
-| A new OccupyPlaceV2 message has been created in order to simplify communications with the AHT and remove the need for cache management. |
-| Removed Cache Management as this information is now fully enclosed in the OccupyPlaceV2 message. |
+| A new OccupyPlaceRequestV1 message has been created in order to simplify communications with the AHT and remove the need for cache management. |
+| Removed Cache Management as this information is now fully enclosed in the OccupyPlaceRequestV1 message. |
 | Removed all `VehicleId` attribute from messages, and to use top-level message headers `EquipmentId` |
 | Added `RequestId` to all request-reponse type messages to correlate and link messages |
  
@@ -52,13 +52,13 @@ Find below the Specification for the Version 2 protocol for the spot service of 
 ### [ServiceIdentification](ServiceIdentification.md)
 ### [MessageHeaders](MessageHeaders.md)
 # Last Mile Dispatching
-### [OccupyPlaceV2](OccupyPlaceV2.md)
+### [OccupyPlaceRequestV1](OccupyPlaceRequestV1.md)
 ### [OccupyPlaceResponseV1](OccupyPlaceResponseV1.md)
-### [TaskStartV2](TaskStartV2.md)
+### [TaskStartRequestV1](TaskStartRequestV1.md)
 ### [TaskStartResponseV1](TaskStartResponseV1.md)
-### [LeavePlaceV2](LeavePlaceV2.md)
+### [LeavePlaceRequestV1](LeavePlaceRequestV1.md)
 ### [LeavePlaceResponseV1](LeavePlaceResponseV1.md)
-### [VehicleDismissedV2](VehicleDismissedV2.md)
+### [VehicleDismissedRequestV1](VehicleDismissedRequestV1.md)
 ### [VehicleDismissedResponseV1](VehicleDismissedResponseV1.md)
 ---
 
