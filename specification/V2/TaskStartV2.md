@@ -12,14 +12,13 @@ For agreed upon tasks *(e.g. crusher dumping)*, the truck will spot and wait to 
 
 **Note**: the top-level message should contain the `EquipmentId` which is the EquipmentId of the vehicle that is spotted there.
 
-**Note**: the top-level message should contain a `CorrelationId` that which will be used in the TaskStartResponseV1 message to correlate to this message.
-
 <br>
 
 ## Message attributes
 |key |value |format | Description|
 |---|:---:|:---:|---|
-|``"LastMileId"``| DispatchingId| UUID| A unique ID for this dispatching that will remain the same throught the process of dispatching the truck to the spot and until the truck is released from the Last Mile dispatching process. |
+|`"LastMileId"`| DispatchingId| UUID| A unique ID for this dispatching that will remain the same throught the process of dispatching the truck to the spot and until the truck is released from the Last Mile dispatching process. |
+|`"RequestId"` | RequestId | UUID | A unique ID for to link the response message to the request message. |
 |`"PlaceId"`| WayId | UUID | The spot where the truck has spotted and is waiting for the go ahead. |
 
 ## Use Case:
@@ -32,11 +31,11 @@ The truck 2248...eec6 spotted at a7b3c4d5...2e3f4a5b6c7d is told to start the ac
   "Protocol":"Open-Autonomy",
   "Version": 2,
   "Timestamp": "2023-01-24T09:30:10.948Z",
-  "CorrelationId": "a82291f2-f97d-45cf-bb5c-601a1dbd2641",
   "EquipmentId": "2248d535-3daf-4a86-b1e1-4951a22beec6",
   "TaskStartV2":
   {
     "LastMileId": "f1b9b3b4-0b3b-4b3b-8b3b-0b3b3b3b3b3b",
+    "RequestId": "a82291f2-f97d-45cf-bb5c-601a1dbd2641",
     "PlaceId": "a7b3c4d5-6e7f-8a9b-0c1d-2e3f4a5b6c7d"
   }
 }

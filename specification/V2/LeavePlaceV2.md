@@ -12,13 +12,12 @@ This message represents what is called a **truck kickout** in the industry.  Thi
 
 **Note**: the top-level message should contain the `EquipmentId` which is the EquipmentId of the vehicle that need to leave the spot.
 
-**Note**: the top-level message should contain a `CorrelationId` which will be used in the LeavePlaceResponseV1 message to correlate to this message.
-
 ## Message attributes
 |key |value |format | Description|
 |---|:---:|:---:|---|
 |`"PlaceId"`| PlaceId | uuid | The spot an operator wants the truck to vacate. |
 |`"LastMileId"` | DispatchingId | UUID | A unique ID for this dispatching that will remain the same throught the process of dispatching the truck to the spot and until the truck is released from the Last Mile dispatching process. |
+|`"RequestId"` | RequestId | UUID | A unique ID for to link the response message to the request message. |
 
 
 
@@ -32,10 +31,10 @@ The truck `2248d535-3daf-4a86-b1e1-4951a22beec6` spotted at `4f4e2b7e-9eb6-11ed-
   "Protocol":"Open-Autonomy",
   "Version": 2,
   "Timestamp": "2023-01-24T09:34:26.18Z",
-  "CorrelationId": "a82291f2-f97d-45cf-bb5c-601a1dbd2641",
   "EquipmentId": "2248d535-3daf-4a86-b1e1-4951a22beec6",
   "LeavePlaceV2":
   {
+    "RequestId" : "a82291f2-f97d-45cf-bb5c-601a1dbd2641",
     "PlaceId": "4f4e2b7e-9eb6-11ed-a8fc-0242ac120002",
     "LastMileId":"23456756-aa34-5742-9b66-08a5d4294f34"
   }

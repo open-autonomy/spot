@@ -12,7 +12,7 @@ The following table describes the changeset between Version 2 and Version 1 of t
 | A new OccupyPlaceV2 message has been created in order to simplify communications with the AHT and remove the need for cache management. |
 | Removed Cache Management as this information is now fully enclosed in the OccupyPlaceV2 message. |
 | Removed all `VehicleId` attribute from messages, and to use top-level message headers `EquipmentId` |
-| Added `CorrelationId` in top-level message headers to link relevant messages |
+| Added `RequestId` to all request-reponse type messages to correlate and link messages |
  
 
 

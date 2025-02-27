@@ -7,7 +7,7 @@ The Occupy place message is a mini-dispatching instruction set on how to reach a
 |`Spot` | `ApproachingLastMileV2` message| truck movement in open area. |
 |`Spot` | Resource becomes available | A queue point or spot that is needed by the truck becomes available. |
 |`Spot` | Resource becomes unavailable | A queue point or spot that is needed by the truck becomes unavailable. |
-| `Spot` | Manual Reissue | Truck is directed to continue spotting to the either same or a different spot by a dispatcher. |
+|`Spot` | Manual Reissue | Truck is directed to continue spotting to the either same or a different spot by a dispatcher. |
 
 <br>
 
@@ -22,15 +22,14 @@ The message envelop will also contain a copy of all objects representing the res
 
 **Note**: the top-level message should contain the `EquipmentId` which is the EquipmentId of the vehicle that is receiving the dispatching instructions.
 
-**Note**: the top-level message should contain a `CorrelationId` which will be found from the ApproachingLastMileV2 message that triggered this message. And the `CorrelationId` in this message will be used in the OccupyPlaceResponseV1 message.
-
 ## Message attributes
 
 |key |value |format | Description|
 |---|:---:|:---:|---|
-|``"LastMileId"``| DispatchingId| UUID| A unique ID for this dispatching that will remain the same throught the process of dispatching the truck to the spot and until the truck is released from the Last Mile dispatching process. |
-|``"Queues"`` | N/A | ArrayOf `[Queue]` | A list of zero or more queue points that the vehicle will need to transit through. |
-|``"Spot"`` | Spot | Spot <br> `nullable` | Either describes the spot the vehicle has permission to or null if no spot is currently available. |
+|`"LastMileId"`| DispatchingId| UUID| A unique ID for this dispatching that will remain the same throught the process of dispatching the truck to the spot and until the truck is released from the Last Mile dispatching process. |
+|`"RequestId"` | RequestId | UUID | A unique ID for to link the response message to the request message. |
+|`"Queues"` | N/A | ArrayOf `[Queue]` | A list of zero or more queue points that the vehicle will need to transit through. |
+|`"Spot"` | Spot | Spot <br> `nullable` | Either describes the spot the vehicle has permission to or null if no spot is currently available. |
 
 
 ## Use Case:
@@ -45,11 +44,11 @@ Vehicle `2248d535-3daf-4a86-b1e1-4951a22beec6` is granted permission to go throu
   "Protocol":"Open-Autonomy",
   "Version": 2,
   "Timestamp": "2023-01-23T09:30:10.435Z",
-  "CorrelationId": "b82291f2-f97d-45cf-bb5c-601a1dbd2642",
   "EquipmentId": "2248d535-3daf-4a86-b1e1-4951a22beec6",
   "OccupyPlaceV2":
   {
     "LastMileId": "a82291f2-f97d-45cf-bb5c-601a1dbd2641",
+    "RequestId": "a82291f2-f97d-45cf-bb5c-601a1dbd2641",
     "Queues": [
         {
             "PlaceId": "e7b8a9f4-3c4e-4d8b-9b2e-8f9d6c3e7a1f",
@@ -93,11 +92,11 @@ Vehicle `9ac95f3e-9eac-11ed-a8fc-0242ac120002` is granted permission to enter bu
   "Protocol":"Open-Autonomy",
   "Version": 2,
   "Timestamp": "2023-01-23T09:30:10.435Z",
-  "CorrelationId": "e82291f2-f97d-45cf-bb5c-601a1dbd2642",
   "EquipmentId": "9ac95f3e-9eac-11ed-a8fc-0242ac120002",
   "OccupyPlaceV2":
   {
     "LastMileId": "7a82291f2-f97d-45cf-bb5c-601a1dbd2641",
+    "RequestId": "e82291f2-f97d-45cf-bb5c-601a1dbd2642",
     "Queues": [
         {
             "PlaceId": "e7b8a9f4-3c4e-4d8b-9b2e-8f9d6c3e7a1f",
@@ -126,11 +125,11 @@ Vehicle `9ac95f3e-9eac-11ed-a8fc-0242ac120002` is granted permission to go to th
   "Protocol":"Open-Autonomy",
   "Version": 2,
   "Timestamp": "2023-01-23T09:30:10.435Z",
-  "CorrelationId": "4b82291f2-f97d-45cf-bb5c-601a1dbd2642",
   "Equipment": "9ac95f3e-9eac-11ed-a8fc-0242ac120002",
   "OccupyPlaceV2":
   {
     "LastMileId": "3a82291f2-f97d-45cf-bb5c-601a1dbd2641",
+    "RequestId": "e82291f2-f97d-45cf-bb5c-601a1dbd2642",
     "Queues": [],
     "Spot": {
         "PlaceId": "9ac95f3e-9eac-11ed-a8fc-0242ac120002",
