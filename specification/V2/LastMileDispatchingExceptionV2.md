@@ -18,7 +18,7 @@ This message is sent by `AHS` to tells the `LastMileDispatching` that this vehic
 |---|:---:|:---:|---|
 |`"LastMileId"`| DispatchingId | UUID | A unique ID for this dispatching that will remain the same throught the process of last mile dispatching the truck to the spot and until the truck is released from the Last Mile dispatching process. |
 |`"PlaceId"`| PlaceId| UUID <br/>`nullable` |The next place the vehicle is trying to reach but has encountered an exception during its locomotion there. |
-|`"ExceptionId"` | AHS Specific | uint_64 | An out of specification, AHS specific and pre-defined number that the last mile dispatching can use to match with a human readable description of the exception and/or automate a workflow. |
+|`"Reason"` | AHS Specific | string enumeration | An out of specification, AHS specific and pre-defined string enumeration that the last mile dispatching can use to match with a human readable description of the exception and/or automate a workflow. |
 |`"Detail"`| Human readable text | string <br/>`nullable` | A human readable error message that explains what problem the truck has encountered and possibly a proposed resolution.  This field is optional, but it is expected that when null, the AHS has provided the LMD with documentation for each number with a description and possibly a remediation to the exception.
 
 
@@ -42,7 +42,7 @@ While driving to the final spot `"c20f2649-fefe-49b3-a6af-db5f337d1006"`, Truck 
   {
     "LastMileId":"23456756-aa34-5742-9b66-08a5d4294f34",
     "PlaceId": "c20f2649-fefe-49b3-a6af-db5f337d1006",
-    "ExceptionId": 27,
+    "Reason": "Fallen",
     "Detail":"I've fallen and I can't get up."
   }
 
