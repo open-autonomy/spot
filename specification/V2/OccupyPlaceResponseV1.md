@@ -1,4 +1,4 @@
-# OccupyingPlaceResponseV1
+# OccupyPlaceResponseV1
 All OccupyPlaceV2 messages should be responded to with an OccupyPlaceResponseV1 message.  This message is used to acknowledge the receipt of the OccupyPlaceV2 message and to inform the sender of the acceptance or rejection of the request.  The response message should contain the same `EquipmentId`, `LastMileId`, and `CorrelationId` as the request message.  The response message should also contain a `Response` field that indicates whether the request was accepted or rejected.  If the request was rejected, the response message should also contain a `Detail` field that provides a human readable description of the reason for the rejection.
 
 |Sender| Triggered by | Triggers|
