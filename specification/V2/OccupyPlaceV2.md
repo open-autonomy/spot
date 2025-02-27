@@ -4,7 +4,7 @@ The Occupy place message is a mini-dispatching instruction set on how to reach a
 
 |Sender| Triggered by | Triggers|
 |---|---|---|
-|`Spot` | `ApproachingLastMileV2` message| truck movement in open area. |
+|`Spot` | `ApproachingLastMileV2` message| A truck that is getting a last mile assingment |
 |`Spot` | Resource becomes available | A queue point or spot that is needed by the truck becomes available. |
 |`Spot` | Resource becomes unavailable | A queue point or spot that is needed by the truck becomes unavailable. |
 |`Spot` | Manual Reissue | Truck is directed to continue spotting to the either same or a different spot by a dispatcher. |
