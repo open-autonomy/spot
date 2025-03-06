@@ -70,4 +70,5 @@ Find below the Specification for the Version 2 protocol for the spot service of 
 ### [LastMileDispatchingQuitV2](LastMileDispatchingQuitV2.md)
 ### [LeftPlaceV2](LeftPlaceV2.md)
 ### [OccupyingPlaceV2](OccupyingPlaceV2.md)
+### [TaskCompleteV2](TaskCompleteV2.md)
 
