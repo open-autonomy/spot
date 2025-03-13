@@ -1,5 +1,7 @@
 # TaskCompleteV1
 
+[![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges)
+
 Dump tasks are completed autonomously without any human intervention. In these cases, it is important for the AHS to inform the FMS explicitly that it has completed its task and will soon be leaving the spot.
 
 <br>
