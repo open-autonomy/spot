@@ -58,8 +58,7 @@ Find below the Specification for the Version 2 protocol for the spot service of 
 ### [TaskStartResponseV1](TaskStartResponseV1.md)
 ### [LeavePlaceRequestV1](LeavePlaceRequestV1.md)
 ### [LeavePlaceResponseV1](LeavePlaceResponseV1.md)
-### [VehicleDismissedRequestV1](VehicleDismissedRequestV1.md)
-### [VehicleDismissedResponseV1](VehicleDismissedResponseV1.md)
+### [VehicleDismissedV2](VehicleDismissedV2.md)
 ---
 
 <br>
