@@ -1,4 +1,7 @@
 # VehicleDismissedV2
+
+[![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges)
+
 This message allows the Spot service to inform the AHS that the last mile assignment has been terminated. This is used when the vehicle is no longer able to complete the last mile assignment, for example, if the vehicle has broken down and is unable to expressly quit the last mile assignment.
 
 Note that this will not automatically release a spot that is occupied by a vehicle, which should send a `LeftPlaceV2` message to the Spot service if it is able to do so. If the vehicle is unable to send a `LeftPlaceV2` message, human intervention via the FMS should be used to release the spot.
