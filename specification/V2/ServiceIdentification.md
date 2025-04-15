@@ -1,4 +1,4 @@
-# SpotServiceV1
+# SpotServiceV2
 The first message sent by the `spot` service.  It identifies that the client is talking to the right service and identifies the highest protocol version it supports.
 
 > NOTE: Security is supplied at the infrastructure level, not at the application level.  The authentication and authorization has already been done by the time the client reaches this point;  so it is considered safe to provide a lot of information on the service beyond this point.
@@ -16,22 +16,21 @@ The first message sent by the `spot` service.  It identifies that the client is 
 ## Message attributes
 |key |value |format | Description|
 |---|:---:|:---:|---|
-|`"API"`| Version| integer|The highest spot protocol version it supports|
+|`"API"`| 2 | integer|The highest spot protocol version it supports|
 
 
 ## Use Case:
 This message is used when a client connects to the spot service.
 ## Example
-This example would be for a future version that would support multiple scopes.
-```json
+```JSON
 {
   "Protocol":"Open-Autonomy",
-  "Version": 1,
+  "Version": 2,
   "Timestamp": "2023-01-24T09:30:10.948Z",
 
   "SpotServiceV1":
   {
-	  "API": 1
+	  "API": 2
   }
 
 }
