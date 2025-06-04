@@ -4,7 +4,7 @@
 
 This message allows the Spot service to inform the AHS that the last mile assignment has been terminated. This is used when the vehicle is no longer able to complete the last mile assignment, for example, if the vehicle has broken down and is unable to expressly quit the last mile assignment.
 
-Note that this will not automatically release a spot that is occupied by a vehicle, which should send a `LeftPlaceV2` message to the Spot service if it is able to do so. If the vehicle is unable to send a `LeftPlaceV2` message, human intervention via the FMS should be used to release the spot.
+Note this will release all reserved and occupied spots and queues of the vehicle in the spot service.
 
 **Note**: the top-level message should contain the `EquipmentId` which is the EquipmentId of the vehicle that is receiving the dispatching instructions.
 
